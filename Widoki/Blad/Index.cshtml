@@ -1,0 +1,9 @@
+﻿@{
+    var kod = ViewBag.Kod is int k ? k : 500;
+    var brak = kod == 404;
+}
+<div class="karta waska">
+    <h1>@(brak ? "Nie znaleziono strony" : "Coś poszło nie tak")</h1>
+    <p>@(brak ? "Strona, której szukasz, nie istnieje albo została przeniesiona." : "Wystąpił błąd. Spróbuj ponownie za chwilę.")</p>
+    <a class="przycisk" asp-controller="Nauka" asp-action="Index">Wróć do lekcji</a>
+</div>

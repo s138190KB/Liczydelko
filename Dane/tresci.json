@@ -1,0 +1,1866 @@
+{
+  "levele": [
+    {
+      "numer": 1,
+      "nazwa": "Początkujący",
+      "opis": "Każdy zaczyna od levelu 1. Ukończ wszystkie materiały klas 1-3, aby awansować.",
+      "wymaganyEtap": 0
+    },
+    {
+      "numer": 2,
+      "nazwa": "Podstawowy",
+      "opis": "Ukończone wszystkie materiały klas 1-3.",
+      "wymaganyEtap": 1
+    },
+    {
+      "numer": 3,
+      "nazwa": "Średnio zaawansowany",
+      "opis": "Ukończone wszystkie materiały klas 1-8 szkoły podstawowej.",
+      "wymaganyEtap": 3
+    },
+    {
+      "numer": 4,
+      "nazwa": "Zaawansowany",
+      "opis": "Ukończone klasy 1-8 oraz szkoła średnia na poziomie podstawowym.",
+      "wymaganyEtap": 4
+    },
+    {
+      "numer": 5,
+      "nazwa": "Mistrz matematyki",
+      "opis": "Ukończony cały materiał, także poziom rozszerzony.",
+      "wymaganyEtap": 5
+    }
+  ],
+  "poziomy": [
+    {
+      "kod": "p1",
+      "nazwa": "Szkoła podstawowa, klasy 1-3",
+      "typSzkoly": "Szkoła podstawowa",
+      "zakres": "Klasy 1-3",
+      "kolejnosc": 1,
+      "opis": "Edukacja wczesnoszkolna. Nauka opiera się na konkretach, intuicji oraz prostych grach i manipulacjach przedmiotami.",
+      "dzialy": [
+        {
+          "kod": "p1/liczby-i-operacje",
+          "nazwa": "Liczby i operacje",
+          "opis": "Dodawanie i odejmowanie w zakresie do 100, podstawy tabliczki mnożenia i dzielenia, odczytywanie liczb do 1000.",
+          "kategoria": "Ulamki",
+          "lekcje": [
+            {
+              "kod": "p1/liczby-i-operacje/dodawanie-i-odejmowanie-do-100",
+              "tytul": "Dodawanie i odejmowanie do 100",
+              "kolejnosc": 1,
+              "wymaganyWynik": 60,
+              "wprowadzenie": "Dodawanie łączy liczby w większą całość, a odejmowanie pokazuje, ile zostaje po zabraniu.",
+              "teoria": "<p><b>Dodawanie</b> to łączenie liczb: 20 + 15 = 35. Wynik nazywamy sumą.</p><p><b>Odejmowanie</b> to zabieranie: 50 - 20 = 30. Wynik nazywamy różnicą.</p><p>Wygodnie liczyć dziesiątkami: 47 + 20 = 67, bo dodajemy 2 dziesiątki do 4 dziesiątek.</p>",
+              "wzory": "a + b = b + a|a - b + b = a|a + 0 = a",
+              "wskazowki": "Najpierw dodaj lub odejmij dziesiątki.|Potem dodaj lub odejmij jedności.|Sprawdź wynik działaniem odwrotnym.",
+              "przyklady": [
+                {
+                  "kod": "p1/liczby-i-operacje/dodawanie-i-odejmowanie-do-100#e1",
+                  "tresc": "Oblicz 36 + 27",
+                  "rozwiazanie": "Dodaj dziesiątki: 30 + 20 = 50|Dodaj jedności: 6 + 7 = 13|Połącz: 50 + 13 = 63"
+                },
+                {
+                  "kod": "p1/liczby-i-operacje/dodawanie-i-odejmowanie-do-100#e2",
+                  "tresc": "Oblicz 82 - 35",
+                  "rozwiazanie": "Odejmij dziesiątki: 82 - 30 = 52|Odejmij jedności: 52 - 5 = 47|Wynik: 47"
+                }
+              ],
+              "pytania": [
+                {
+                  "kod": "p1/liczby-i-operacje/dodawanie-i-odejmowanie-do-100#q1",
+                  "trudnosc": 1,
+                  "tresc": "Oblicz: 25 + 14",
+                  "odpA": "38",
+                  "odpB": "39",
+                  "odpC": "41",
+                  "odpD": "29",
+                  "poprawna": "B"
+                },
+                {
+                  "kod": "p1/liczby-i-operacje/dodawanie-i-odejmowanie-do-100#q2",
+                  "trudnosc": 1,
+                  "tresc": "Oblicz: 60 - 20",
+                  "odpA": "80",
+                  "odpB": "50",
+                  "odpC": "40",
+                  "odpD": "30",
+                  "poprawna": "C"
+                },
+                {
+                  "kod": "p1/liczby-i-operacje/dodawanie-i-odejmowanie-do-100#q3",
+                  "trudnosc": 2,
+                  "tresc": "Oblicz: 48 + 37",
+                  "odpA": "75",
+                  "odpB": "85",
+                  "odpC": "95",
+                  "odpD": "84",
+                  "poprawna": "B"
+                },
+                {
+                  "kod": "p1/liczby-i-operacje/dodawanie-i-odejmowanie-do-100#q4",
+                  "trudnosc": 2,
+                  "tresc": "Oblicz: 91 - 46",
+                  "odpA": "55",
+                  "odpB": "44",
+                  "odpC": "45",
+                  "odpD": "54",
+                  "poprawna": "C"
+                },
+                {
+                  "kod": "p1/liczby-i-operacje/dodawanie-i-odejmowanie-do-100#q5",
+                  "trudnosc": 3,
+                  "tresc": "Ania miała 73 zł, wydała 28 zł, a potem dostała 15 zł. Ile ma teraz?",
+                  "odpA": "60 zł",
+                  "odpB": "45 zł",
+                  "odpC": "88 zł",
+                  "odpD": "50 zł",
+                  "poprawna": "A"
+                },
+                {
+                  "kod": "p1/liczby-i-operacje/dodawanie-i-odejmowanie-do-100#q6",
+                  "trudnosc": 3,
+                  "tresc": "Które działanie daje wynik 100?",
+                  "odpA": "58 + 52",
+                  "odpB": "64 + 46",
+                  "odpC": "64 + 36",
+                  "odpD": "77 + 33",
+                  "poprawna": "C"
+                }
+              ],
+              "zadania": [
+                {
+                  "kod": "p1/liczby-i-operacje/dodawanie-i-odejmowanie-do-100#z1",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "30 + 40 = []",
+                  "odpowiedz": "70",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p1/liczby-i-operacje/dodawanie-i-odejmowanie-do-100#z2",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "56 + 20 = []",
+                  "odpowiedz": "76",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p1/liczby-i-operacje/dodawanie-i-odejmowanie-do-100#z3",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "90 - 35 = []",
+                  "odpowiedz": "55",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p1/liczby-i-operacje/dodawanie-i-odejmowanie-do-100#z4",
+                  "rodzaj": "Czas",
+                  "tresc": "8 + 7 = []",
+                  "odpowiedz": "15",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p1/liczby-i-operacje/dodawanie-i-odejmowanie-do-100#z5",
+                  "rodzaj": "Czas",
+                  "tresc": "50 - 18 = []",
+                  "odpowiedz": "32",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p1/liczby-i-operacje/dodawanie-i-odejmowanie-do-100#z6",
+                  "rodzaj": "Czas",
+                  "tresc": "25 + 25 = []",
+                  "odpowiedz": "50",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p1/liczby-i-operacje/dodawanie-i-odejmowanie-do-100#z7",
+                  "rodzaj": "Blad",
+                  "tresc": "Oblicz 45 + 38",
+                  "odpowiedz": "70+13=83|45+38=83|83",
+                  "wyjasnienie": "70 + 13 = 83, a nie 73.",
+                  "bledneRozwiazanie": "45 + 38|40 + 30 = 70|5 + 8 = 13|70 + 13 = 73"
+                },
+                {
+                  "kod": "p1/liczby-i-operacje/dodawanie-i-odejmowanie-do-100#z8",
+                  "rodzaj": "Blad",
+                  "tresc": "Oblicz 72 - 29",
+                  "odpowiedz": "52-9=43|72-29=43|43",
+                  "wyjasnienie": "52 - 9 = 43, a nie 41.",
+                  "bledneRozwiazanie": "72 - 29|72 - 20 = 52|52 - 9 = 41"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kod": "p1/geometria",
+          "nazwa": "Geometria",
+          "opis": "Rozpoznawanie figur (kwadrat, prostokąt, trójkąt, koło) oraz prostych brył (kostka, kula).",
+          "kategoria": "Geometria",
+          "lekcje": []
+        },
+        {
+          "kod": "p1/pomiary",
+          "nazwa": "Pomiary",
+          "opis": "Zegar i kalendarz, mierzenie długości, ważenie oraz podstawy płatności pieniężnych.",
+          "kategoria": "Ulamki",
+          "lekcje": []
+        },
+        {
+          "kod": "p1/zadania-z-trescia",
+          "nazwa": "Zadania z treścią",
+          "opis": "Proste, jedno- i dwudziałaniowe zadania tekstowe związane z życiem codziennym.",
+          "kategoria": "Rownania",
+          "lekcje": []
+        }
+      ]
+    },
+    {
+      "kod": "p2",
+      "nazwa": "Szkoła podstawowa, klasy 4-6",
+      "typSzkoly": "Szkoła podstawowa",
+      "zakres": "Klasy 4-6",
+      "kolejnosc": 2,
+      "opis": "Budowanie fundamentów. Wprowadzenie formalnego języka matematycznego oraz pierwszych pojęć abstrakcyjnych.",
+      "dzialy": [
+        {
+          "kod": "p2/arytmetyka",
+          "nazwa": "Arytmetyka",
+          "opis": "Działania na liczbach naturalnych, ułamki zwykłe i dziesiętne, liczby ujemne i oś liczbowa.",
+          "kategoria": "Ulamki",
+          "lekcje": []
+        },
+        {
+          "kod": "p2/teoria-liczb",
+          "nazwa": "Teoria liczb",
+          "opis": "Cechy podzielności, liczby pierwsze i złożone, NWD i NWW.",
+          "kategoria": "Ulamki",
+          "lekcje": []
+        },
+        {
+          "kod": "p2/rownania",
+          "nazwa": "Równania",
+          "opis": "Wprowadzenie niewiadomej x i proste równania z jednym krokiem operacyjnym.",
+          "kategoria": "Rownania",
+          "lekcje": []
+        },
+        {
+          "kod": "p2/geometria-plaska",
+          "nazwa": "Geometria płaska",
+          "opis": "Kąty, trójkąty i czworokąty, obwody i pola figur, skala i plan.",
+          "kategoria": "Geometria",
+          "lekcje": [
+            {
+              "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata",
+              "tytul": "Pole i obwód prostokąta oraz trójkąta",
+              "wprowadzenie": "Pole mówi, ile miejsca zajmuje figura. Obwód to suma długości jej boków.",
+              "teoria": "<p><b>Obwód</b> figury to suma długości wszystkich jej boków.</p><p><b>Pole</b> mierzymy w jednostkach kwadratowych, np. cm kwadratowych.</p><p>Suma kątów w trójkącie wynosi 180 stopni.</p>",
+              "wzory": "Pole prostokąta: P = a * b|Obwód prostokąta: Ob = 2a + 2b|Pole trójkąta: P = a * h / 2",
+              "wskazowki": "Narysuj figurę i opisz boki.|Wybierz właściwy wzór.|Podstaw liczby i dopisz jednostkę.",
+              "kolejnosc": 1,
+              "wymaganyWynik": 60,
+              "przyklady": [
+                {
+                  "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata#e1",
+                  "tresc": "Prostokąt ma boki 8 cm i 5 cm. Oblicz pole i obwód.",
+                  "rozwiazanie": "Pole: 8 * 5 = 40 cm kwadratowych|Obwód: 2 * 8 + 2 * 5 = 26 cm"
+                },
+                {
+                  "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata#e2",
+                  "tresc": "Trójkąt ma podstawę 12 cm i wysokość 7 cm. Oblicz pole.",
+                  "rozwiazanie": "Wzór: P = a * h / 2|Podstaw: 12 * 7 / 2 = 84 / 2|Wynik: 42 cm kwadratowe"
+                }
+              ],
+              "pytania": [
+                {
+                  "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata#q1",
+                  "trudnosc": 1,
+                  "tresc": "Pole prostokąta o bokach 6 i 4 wynosi:",
+                  "odpA": "10",
+                  "odpB": "20",
+                  "odpC": "24",
+                  "odpD": "48",
+                  "poprawna": "C"
+                },
+                {
+                  "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata#q2",
+                  "trudnosc": 1,
+                  "tresc": "Obwód prostokąta o bokach 6 i 4 wynosi:",
+                  "odpA": "20",
+                  "odpB": "24",
+                  "odpC": "10",
+                  "odpD": "12",
+                  "poprawna": "A"
+                },
+                {
+                  "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata#q3",
+                  "trudnosc": 1,
+                  "tresc": "Pole trójkąta o podstawie 10 i wysokości 6 wynosi:",
+                  "odpA": "60",
+                  "odpB": "16",
+                  "odpC": "15",
+                  "odpD": "30",
+                  "poprawna": "D"
+                },
+                {
+                  "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata#q4",
+                  "trudnosc": 1,
+                  "tresc": "Suma kątów w trójkącie wynosi:",
+                  "odpA": "90 stopni",
+                  "odpB": "180 stopni",
+                  "odpC": "360 stopni",
+                  "odpD": "270 stopni",
+                  "poprawna": "B"
+                },
+                {
+                  "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata#q5",
+                  "trudnosc": 1,
+                  "tresc": "Pole kwadratu o boku 9 wynosi:",
+                  "odpA": "81",
+                  "odpB": "36",
+                  "odpC": "18",
+                  "odpD": "27",
+                  "poprawna": "A"
+                },
+                {
+                  "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata#q6",
+                  "trudnosc": 2,
+                  "tresc": "Prostokąt ma pole 48 i jeden bok 8. Drugi bok ma:",
+                  "odpA": "40",
+                  "odpB": "6",
+                  "odpC": "56",
+                  "odpD": "12",
+                  "poprawna": "B"
+                },
+                {
+                  "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata#q7",
+                  "trudnosc": 2,
+                  "tresc": "Obwód kwadratu o boku 7 wynosi:",
+                  "odpA": "14",
+                  "odpB": "49",
+                  "odpC": "28",
+                  "odpD": "21",
+                  "poprawna": "C"
+                },
+                {
+                  "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata#q8",
+                  "trudnosc": 2,
+                  "tresc": "Trójkąt ma pole 30 i podstawę 10. Jego wysokość wynosi:",
+                  "odpA": "3",
+                  "odpB": "12",
+                  "odpC": "60",
+                  "odpD": "6",
+                  "poprawna": "D"
+                },
+                {
+                  "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata#q9",
+                  "trudnosc": 2,
+                  "tresc": "Dwa kąty trójkąta mają 50 i 70 stopni. Trzeci kąt ma:",
+                  "odpA": "60 stopni",
+                  "odpB": "120 stopni",
+                  "odpC": "70 stopni",
+                  "odpD": "50 stopni",
+                  "poprawna": "A"
+                },
+                {
+                  "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata#q10",
+                  "trudnosc": 3,
+                  "tresc": "Prostokąt ma obwód 36 i jeden bok 10. Jego pole wynosi:",
+                  "odpA": "64",
+                  "odpB": "360",
+                  "odpC": "80",
+                  "odpD": "100",
+                  "poprawna": "C"
+                },
+                {
+                  "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata#q11",
+                  "trudnosc": 3,
+                  "tresc": "Trójkąt ma podstawę 16 i pole 56. Jego wysokość wynosi:",
+                  "odpA": "3,5",
+                  "odpB": "7",
+                  "odpC": "14",
+                  "odpD": "28",
+                  "poprawna": "B"
+                },
+                {
+                  "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata#q12",
+                  "trudnosc": 3,
+                  "tresc": "Bok kwadratu zwiększono dwukrotnie. Jego pole wzrosło:",
+                  "odpA": "2 razy",
+                  "odpB": "8 razy",
+                  "odpC": "4 razy",
+                  "odpD": "o 2",
+                  "poprawna": "C"
+                },
+                {
+                  "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata#q13",
+                  "trudnosc": 3,
+                  "tresc": "Pole figury złożonej z prostokąta 6 x 4 i trójkąta o podstawie 6 i wysokości 3 wynosi:",
+                  "odpA": "27",
+                  "odpB": "30",
+                  "odpC": "39",
+                  "odpD": "33",
+                  "poprawna": "D"
+                }
+              ],
+              "zadania": [
+                {
+                  "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata#z1",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "Pole prostokąta 5 x 9 = []",
+                  "odpowiedz": "45",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata#z2",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "Obwód kwadratu o boku 6 = 4 * [] = []",
+                  "odpowiedz": "6;24",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata#z3",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "Pole trójkąta o a = 8 i h = 5: 8 * 5 / 2 = [] / 2 = []",
+                  "odpowiedz": "40;20",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata#z4",
+                  "rodzaj": "Czas",
+                  "tresc": "Pole kwadratu o boku 7 = []",
+                  "odpowiedz": "49",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata#z5",
+                  "rodzaj": "Czas",
+                  "tresc": "Obwód prostokąta o bokach 3 i 8 = []",
+                  "odpowiedz": "22",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata#z6",
+                  "rodzaj": "Czas",
+                  "tresc": "Trzeci kąt trójkąta o kątach 40 i 80 stopni = []",
+                  "odpowiedz": "60",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata#z7",
+                  "rodzaj": "Blad",
+                  "tresc": "Oblicz pole trójkąta o podstawie 10 i wysokości 6",
+                  "odpowiedz": "p=10*6/2=30|10*6/2=30|30",
+                  "wyjasnienie": "Pole trójkąta to połowa iloczynu podstawy i wysokości: 10 * 6 / 2 = 30.",
+                  "bledneRozwiazanie": "P = a * h|P = 10 * 6|P = 60"
+                },
+                {
+                  "kod": "p2/geometria-plaska/pole-i-obwod-prostokata-oraz-trojkata#z8",
+                  "rodzaj": "Blad",
+                  "tresc": "Oblicz obwód prostokąta o bokach 4 i 7",
+                  "odpowiedz": "ob=2*4+2*7=22|2*4+2*7=22|2*(4+7)=22|22",
+                  "wyjasnienie": "Obwód to suma wszystkich czterech boków: 2 * 4 + 2 * 7 = 22.",
+                  "bledneRozwiazanie": "Ob = 4 + 7|Ob = 11"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kod": "p2/geometria-przestrzenna",
+          "nazwa": "Geometria przestrzenna",
+          "opis": "Prostopadłościan i sześcian: siatki, pole powierzchni, objętość.",
+          "kategoria": "Geometria",
+          "lekcje": []
+        }
+      ]
+    },
+    {
+      "kod": "p3",
+      "nazwa": "Szkoła podstawowa, klasy 7-8",
+      "typSzkoly": "Szkoła podstawowa",
+      "zakres": "Klasy 7-8",
+      "kolejnosc": 3,
+      "opis": "Przygotowanie do egzaminu ósmoklasisty. Algebra, zaawansowane obliczenia procentowe i bardziej złożona geometria.",
+      "dzialy": [
+        {
+          "kod": "p3/potegi-i-pierwiastki",
+          "nazwa": "Potęgi i pierwiastki",
+          "opis": "Notacja wykładnicza, działania na potęgach, pierwiastki kwadratowe i sześcienne.",
+          "kategoria": "Algebra",
+          "lekcje": [
+            {
+              "kod": "p3/potegi-i-pierwiastki/potegi-i-pierwiastki",
+              "tytul": "Potęgi i pierwiastki",
+              "wprowadzenie": "Potęga skraca zapis wielokrotnego mnożenia, a pierwiastek jest działaniem odwrotnym do potęgowania.",
+              "teoria": "<p><b>Potęga</b> a<sup>n</sup> to iloczyn n czynników równych a, np. 2<sup>3</sup> = 2 · 2 · 2 = 8.</p><p><b>Pierwiastek kwadratowy</b> z liczby a (zapis √a) to liczba nieujemna, której kwadrat jest równy a, np. √81 = 9, bo 9<sup>2</sup> = 81.</p><p>Działania na potęgach o tej samej podstawie: przy mnożeniu dodajemy wykładniki, przy dzieleniu odejmujemy, a przy potęgowaniu potęgi mnożymy wykładniki.</p>",
+              "wzory": "a^m * a^n = a^(m + n)|a^m : a^n = a^(m - n)|(a^m)^n = a^(m * n)|√(a * a) = a dla a >= 0",
+              "wskazowki": "Sprawdź, czy podstawy potęg są takie same.|Przy mnożeniu dodaj wykładniki, przy dzieleniu odejmij.|Pierwiastek oblicz osobno dla każdej liczby.",
+              "kolejnosc": 1,
+              "wymaganyWynik": 60,
+              "przyklady": [
+                {
+                  "kod": "p3/potegi-i-pierwiastki/potegi-i-pierwiastki#e1",
+                  "tresc": "Oblicz 2^3 * 2^4",
+                  "rozwiazanie": "Podstawa jest ta sama: 2|Dodaj wykładniki: 3 + 4 = 7|Wynik: 2^7 = 128"
+                },
+                {
+                  "kod": "p3/potegi-i-pierwiastki/potegi-i-pierwiastki#e2",
+                  "tresc": "Oblicz √49 + 3^2",
+                  "rozwiazanie": "√49 = 7, bo 7 * 7 = 49|3^2 = 3 * 3 = 9|Suma: 7 + 9 = 16"
+                }
+              ],
+              "pytania": [
+                {
+                  "kod": "p3/potegi-i-pierwiastki/potegi-i-pierwiastki#q1",
+                  "trudnosc": 1,
+                  "tresc": "Oblicz: 2⁵",
+                  "odpA": "10",
+                  "odpB": "16",
+                  "odpC": "32",
+                  "odpD": "64",
+                  "poprawna": "C"
+                },
+                {
+                  "kod": "p3/potegi-i-pierwiastki/potegi-i-pierwiastki#q2",
+                  "trudnosc": 2,
+                  "tresc": "Który zapis jest równy 3² · 3⁴?",
+                  "odpA": "3⁶",
+                  "odpB": "3⁸",
+                  "odpC": "6⁶",
+                  "odpD": "9⁴",
+                  "poprawna": "A"
+                },
+                {
+                  "kod": "p3/potegi-i-pierwiastki/potegi-i-pierwiastki#q3",
+                  "trudnosc": 2,
+                  "tresc": "Oblicz: (2³)²",
+                  "odpA": "2⁵",
+                  "odpB": "2⁶",
+                  "odpC": "2⁹",
+                  "odpD": "4³",
+                  "poprawna": "B"
+                },
+                {
+                  "kod": "p3/potegi-i-pierwiastki/potegi-i-pierwiastki#q4",
+                  "trudnosc": 1,
+                  "tresc": "Oblicz: √81",
+                  "odpA": "8",
+                  "odpB": "9",
+                  "odpC": "10",
+                  "odpD": "18",
+                  "poprawna": "B"
+                },
+                {
+                  "kod": "p3/potegi-i-pierwiastki/potegi-i-pierwiastki#q5",
+                  "trudnosc": 2,
+                  "tresc": "Które wyrażenie ma wartość 25?",
+                  "odpA": "√125",
+                  "odpB": "5²",
+                  "odpC": "2⁵",
+                  "odpD": "√50",
+                  "poprawna": "B"
+                },
+                {
+                  "kod": "p3/potegi-i-pierwiastki/potegi-i-pierwiastki#q6",
+                  "trudnosc": 1,
+                  "tresc": "Oblicz: 10³ · 10²",
+                  "odpA": "10⁵",
+                  "odpB": "10⁶",
+                  "odpC": "20⁵",
+                  "odpD": "100⁵",
+                  "poprawna": "A"
+                },
+                {
+                  "kod": "p3/potegi-i-pierwiastki/potegi-i-pierwiastki#q7",
+                  "trudnosc": 1,
+                  "tresc": "Która liczba jest równa √144?",
+                  "odpA": "10",
+                  "odpB": "11",
+                  "odpC": "12",
+                  "odpD": "14",
+                  "poprawna": "C"
+                },
+                {
+                  "kod": "p3/potegi-i-pierwiastki/potegi-i-pierwiastki#q8",
+                  "trudnosc": 3,
+                  "tresc": "Które wyrażenia mają wartość 16?",
+                  "odpA": "2⁴",
+                  "odpB": "4²",
+                  "odpC": "√256",
+                  "odpD": "2³",
+                  "poprawna": "ABC"
+                },
+                {
+                  "kod": "p3/potegi-i-pierwiastki/potegi-i-pierwiastki#q9",
+                  "trudnosc": 3,
+                  "tresc": "Oblicz: 3² + √49",
+                  "odpA": "14",
+                  "odpB": "16",
+                  "odpC": "49",
+                  "odpD": "58",
+                  "poprawna": "B"
+                },
+                {
+                  "kod": "p3/potegi-i-pierwiastki/potegi-i-pierwiastki#q10",
+                  "trudnosc": 2,
+                  "tresc": "Który zapis jest równy 5⁶ : 5²?",
+                  "odpA": "5³",
+                  "odpB": "5⁴",
+                  "odpC": "5⁸",
+                  "odpD": "25⁴",
+                  "poprawna": "B"
+                }
+              ],
+              "zadania": [
+                {
+                  "kod": "p3/potegi-i-pierwiastki/potegi-i-pierwiastki#z1",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "2^4 = 2 * 2 * 2 * 2 = []",
+                  "odpowiedz": "16",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/potegi-i-pierwiastki/potegi-i-pierwiastki#z2",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "3^2 * 3^3 = 3^[] = []",
+                  "odpowiedz": "5;243",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/potegi-i-pierwiastki/potegi-i-pierwiastki#z3",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "√100 = [], bo [] * [] = 100",
+                  "odpowiedz": "10;10;10",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/potegi-i-pierwiastki/potegi-i-pierwiastki#z4",
+                  "rodzaj": "Czas",
+                  "tresc": "5^2 = []",
+                  "odpowiedz": "25",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/potegi-i-pierwiastki/potegi-i-pierwiastki#z5",
+                  "rodzaj": "Czas",
+                  "tresc": "√64 = []",
+                  "odpowiedz": "8",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/potegi-i-pierwiastki/potegi-i-pierwiastki#z6",
+                  "rodzaj": "Czas",
+                  "tresc": "10^3 = []",
+                  "odpowiedz": "1000",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/potegi-i-pierwiastki/potegi-i-pierwiastki#z7",
+                  "rodzaj": "Blad",
+                  "tresc": "Oblicz 2^3 * 2^2",
+                  "odpowiedz": "2^3*2^2=2^5=32|2^5=32|2^5|32",
+                  "wyjasnienie": "Przy mnożeniu potęg o tej samej podstawie wykładniki dodajemy: 3 + 2 = 5, więc wynik to 2^5 = 32.",
+                  "bledneRozwiazanie": "2^3 * 2^2|= 2^(3 * 2)|= 2^6 = 64"
+                },
+                {
+                  "kod": "p3/potegi-i-pierwiastki/potegi-i-pierwiastki#z8",
+                  "rodzaj": "Blad",
+                  "tresc": "Oblicz √16 + √9",
+                  "odpowiedz": "√16+√9=4+3=7|4+3=7|7",
+                  "wyjasnienie": "Każdy pierwiastek liczymy osobno: 4 + 3 = 7. Nie wolno łączyć pierwiastków pod jednym znakiem przy dodawaniu.",
+                  "bledneRozwiazanie": "√16 + √9|= √(16 + 9)|= √25 = 5"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kod": "p3/procenty",
+          "nazwa": "Procenty",
+          "opis": "Procent danej liczby, liczba z danego procentu, podwyżki i obniżki.",
+          "kategoria": "Procenty",
+          "lekcje": [
+            {
+              "kod": "p3/procenty/obliczanie-procentu-danej-liczby",
+              "tytul": "Obliczanie procentu danej liczby",
+              "wprowadzenie": "Procenty opisują część całości. Spotkasz je w cenach, obniżkach i wynikach testów.",
+              "teoria": "<p><b>1 procent</b> to jedna setna całości.</p><p>Aby obliczyć p% liczby a, zamieniamy p% na ułamek i mnożymy: a * p / 100.</p><p>Aby sprawdzić, jakim procentem liczby b jest liczba a, dzielimy a przez b i mnożymy przez 100%.</p>",
+              "wzory": "p% z a = a * p / 100|a z b w procentach = a / b * 100%",
+              "wskazowki": "Zamień procent na ułamek dziesiętny.|Pomnóż go przez daną liczbę.|Przy obniżce odejmij wynik od ceny.",
+              "kolejnosc": 1,
+              "wymaganyWynik": 60,
+              "przyklady": [
+                {
+                  "kod": "p3/procenty/obliczanie-procentu-danej-liczby#e1",
+                  "tresc": "Oblicz 20% z 150",
+                  "rozwiazanie": "Zamień 20% na ułamek: 0,2|Pomnóż: 0,2 * 150|Wynik: 30"
+                },
+                {
+                  "kod": "p3/procenty/obliczanie-procentu-danej-liczby#e2",
+                  "tresc": "Bluza kosztowała 80 zł. Obniżka wynosi 25%. Jaka jest nowa cena?",
+                  "rozwiazanie": "Oblicz obniżkę: 0,25 * 80 = 20|Odejmij od ceny: 80 - 20 = 60|Odpowiedź: 60 zł"
+                }
+              ],
+              "pytania": [
+                {
+                  "kod": "p3/procenty/obliczanie-procentu-danej-liczby#q1",
+                  "trudnosc": 1,
+                  "tresc": "Ile to jest 10% z 250?",
+                  "odpA": "25",
+                  "odpB": "10",
+                  "odpC": "2,5",
+                  "odpD": "50",
+                  "poprawna": "A"
+                },
+                {
+                  "kod": "p3/procenty/obliczanie-procentu-danej-liczby#q2",
+                  "trudnosc": 1,
+                  "tresc": "Ile to jest 25% z 80?",
+                  "odpA": "25",
+                  "odpB": "20",
+                  "odpC": "40",
+                  "odpD": "16",
+                  "poprawna": "B"
+                },
+                {
+                  "kod": "p3/procenty/obliczanie-procentu-danej-liczby#q3",
+                  "trudnosc": 1,
+                  "tresc": "Cena 200 zł została obniżona o 15%. Nowa cena to:",
+                  "odpA": "185 zł",
+                  "odpB": "30 zł",
+                  "odpC": "170 zł",
+                  "odpD": "215 zł",
+                  "poprawna": "C"
+                },
+                {
+                  "kod": "p3/procenty/obliczanie-procentu-danej-liczby#q4",
+                  "trudnosc": 1,
+                  "tresc": "Jakim procentem liczby 50 jest liczba 10?",
+                  "odpA": "5%",
+                  "odpB": "10%",
+                  "odpC": "50%",
+                  "odpD": "20%",
+                  "poprawna": "D"
+                },
+                {
+                  "kod": "p3/procenty/obliczanie-procentu-danej-liczby#q5",
+                  "trudnosc": 1,
+                  "tresc": "Ile to jest 150% z 40?",
+                  "odpA": "60",
+                  "odpB": "40",
+                  "odpC": "6",
+                  "odpD": "150",
+                  "poprawna": "A"
+                },
+                {
+                  "kod": "p3/procenty/obliczanie-procentu-danej-liczby#q6",
+                  "trudnosc": 2,
+                  "tresc": "Ile to jest 35% z 200?",
+                  "odpA": "7",
+                  "odpB": "70",
+                  "odpC": "35",
+                  "odpD": "700",
+                  "poprawna": "B"
+                },
+                {
+                  "kod": "p3/procenty/obliczanie-procentu-danej-liczby#q7",
+                  "trudnosc": 2,
+                  "tresc": "Cena 120 zł wzrosła o 10%. Nowa cena to:",
+                  "odpA": "130 zł",
+                  "odpB": "108 zł",
+                  "odpC": "132 zł",
+                  "odpD": "12 zł",
+                  "poprawna": "C"
+                },
+                {
+                  "kod": "p3/procenty/obliczanie-procentu-danej-liczby#q8",
+                  "trudnosc": 2,
+                  "tresc": "Jakim procentem liczby 80 jest liczba 20?",
+                  "odpA": "25%",
+                  "odpB": "40%",
+                  "odpC": "20%",
+                  "odpD": "4%",
+                  "poprawna": "A"
+                },
+                {
+                  "kod": "p3/procenty/obliczanie-procentu-danej-liczby#q9",
+                  "trudnosc": 2,
+                  "tresc": "20% pewnej liczby to 30. Ta liczba to:",
+                  "odpA": "6",
+                  "odpB": "60",
+                  "odpC": "100",
+                  "odpD": "150",
+                  "poprawna": "D"
+                },
+                {
+                  "kod": "p3/procenty/obliczanie-procentu-danej-liczby#q10",
+                  "trudnosc": 3,
+                  "tresc": "Cenę 250 zł obniżono o 20%, a potem podwyższono o 20%. Cena końcowa to:",
+                  "odpA": "250 zł",
+                  "odpB": "240 zł",
+                  "odpC": "260 zł",
+                  "odpD": "200 zł",
+                  "poprawna": "B"
+                },
+                {
+                  "kod": "p3/procenty/obliczanie-procentu-danej-liczby#q11",
+                  "trudnosc": 3,
+                  "tresc": "W klasie jest 25 uczniów, a 60% to dziewczęta. Ilu jest chłopców?",
+                  "odpA": "15",
+                  "odpB": "12",
+                  "odpC": "10",
+                  "odpD": "40",
+                  "poprawna": "C"
+                },
+                {
+                  "kod": "p3/procenty/obliczanie-procentu-danej-liczby#q12",
+                  "trudnosc": 3,
+                  "tresc": "Po obniżce o 30% towar kosztuje 140 zł. Cena przed obniżką to:",
+                  "odpA": "182 zł",
+                  "odpB": "170 zł",
+                  "odpC": "200 zł",
+                  "odpD": "210 zł",
+                  "poprawna": "C"
+                },
+                {
+                  "kod": "p3/procenty/obliczanie-procentu-danej-liczby#q13",
+                  "trudnosc": 3,
+                  "tresc": "Liczbę 50 zwiększono o 40%. Wynik to:",
+                  "odpA": "70",
+                  "odpB": "90",
+                  "odpC": "20",
+                  "odpD": "54",
+                  "poprawna": "A"
+                }
+              ],
+              "zadania": [
+                {
+                  "kod": "p3/procenty/obliczanie-procentu-danej-liczby#z1",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "10% z 300 = 0,1 * 300 = []",
+                  "odpowiedz": "30",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/procenty/obliczanie-procentu-danej-liczby#z2",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "50% z 86 = []",
+                  "odpowiedz": "43",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/procenty/obliczanie-procentu-danej-liczby#z3",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "Cena 100 zł po obniżce o 30% to 100 - [] = []",
+                  "odpowiedz": "30;70",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/procenty/obliczanie-procentu-danej-liczby#z4",
+                  "rodzaj": "Czas",
+                  "tresc": "10% z 90 = []",
+                  "odpowiedz": "9",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/procenty/obliczanie-procentu-danej-liczby#z5",
+                  "rodzaj": "Czas",
+                  "tresc": "25% z 200 = []",
+                  "odpowiedz": "50",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/procenty/obliczanie-procentu-danej-liczby#z6",
+                  "rodzaj": "Czas",
+                  "tresc": "1% z 700 = []",
+                  "odpowiedz": "7",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/procenty/obliczanie-procentu-danej-liczby#z7",
+                  "rodzaj": "Blad",
+                  "tresc": "Oblicz 20% z 150",
+                  "odpowiedz": "0,2*150=30|20%*150=30|20/100*150=30|30",
+                  "wyjasnienie": "Procent zamieniamy na ułamek: 20% = 0,2, więc 0,2 * 150 = 30.",
+                  "bledneRozwiazanie": "20% z 150|= 20 * 150|= 3000"
+                },
+                {
+                  "kod": "p3/procenty/obliczanie-procentu-danej-liczby#z8",
+                  "rodzaj": "Blad",
+                  "tresc": "Cena 80 zł wzrosła o 25%. Oblicz nową cenę.",
+                  "odpowiedz": "80+20=100|100",
+                  "wyjasnienie": "Przy wzroście ceny dodajemy podwyżkę: 80 + 20 = 100 zł.",
+                  "bledneRozwiazanie": "Wzrost: 0,25 * 80 = 20|Nowa cena: 80 - 20 = 60 zł"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kod": "p3/algebra",
+          "nazwa": "Algebra",
+          "opis": "Wyrażenia algebraiczne, mnożenie sum algebraicznych, redukcja wyrazów podobnych.",
+          "kategoria": "Algebra",
+          "lekcje": [
+            {
+              "kod": "p3/algebra/redukcja-wyrazow-podobnych",
+              "tytul": "Redukcja wyrazów podobnych",
+              "wprowadzenie": "Wyrażenia algebraiczne zapisują obliczenia za pomocą liczb i liter. Nauczysz się je upraszczać.",
+              "teoria": "<p><b>Wyrażenie algebraiczne</b> to zapis zawierający liczby, litery i znaki działań.</p><p><b>Wyrazy podobne</b> mają taką samą część literową, np. 3x i 5x. Można je dodawać i odejmować, działając na współczynnikach.</p><p>Wartość liczbową wyrażenia obliczamy, podstawiając liczbę w miejsce litery.</p>",
+              "wzory": "ax + bx = (a + b)x|a(b + c) = ab + ac",
+              "wskazowki": "Wypisz najpierw wyrazy z tą samą literą.|Zsumuj ich współczynniki.|Wyrazy bez litery dodaj osobno.",
+              "kolejnosc": 1,
+              "wymaganyWynik": 60,
+              "przyklady": [
+                {
+                  "kod": "p3/algebra/redukcja-wyrazow-podobnych#e1",
+                  "tresc": "Uprość: 4x + 3y + 2x - y",
+                  "rozwiazanie": "Zbierz wyrazy z x: 4x + 2x = 6x|Zbierz wyrazy z y: 3y - y = 2y|Wynik: 6x + 2y"
+                },
+                {
+                  "kod": "p3/algebra/redukcja-wyrazow-podobnych#e2",
+                  "tresc": "Oblicz wartość wyrażenia 3a + 2 dla a = 5",
+                  "rozwiazanie": "Podstaw 5 za a: 3 * 5 + 2|Pomnóż: 15 + 2|Wynik: 17"
+                }
+              ],
+              "pytania": [
+                {
+                  "kod": "p3/algebra/redukcja-wyrazow-podobnych#q1",
+                  "trudnosc": 1,
+                  "tresc": "Uprość: 3x + 5x",
+                  "odpA": "8x",
+                  "odpB": "15x",
+                  "odpC": "8x^2",
+                  "odpD": "2x",
+                  "poprawna": "A"
+                },
+                {
+                  "kod": "p3/algebra/redukcja-wyrazow-podobnych#q2",
+                  "trudnosc": 1,
+                  "tresc": "Uprość: 4a - a + 2",
+                  "odpA": "5a + 2",
+                  "odpB": "3a + 2",
+                  "odpC": "3a - 2",
+                  "odpD": "4a + 2",
+                  "poprawna": "B"
+                },
+                {
+                  "kod": "p3/algebra/redukcja-wyrazow-podobnych#q3",
+                  "trudnosc": 1,
+                  "tresc": "Oblicz wartość 2x + 3 dla x = 4",
+                  "odpA": "9",
+                  "odpB": "14",
+                  "odpC": "11",
+                  "odpD": "20",
+                  "poprawna": "C"
+                },
+                {
+                  "kod": "p3/algebra/redukcja-wyrazow-podobnych#q4",
+                  "trudnosc": 1,
+                  "tresc": "Uprość: 2x + 3y - x + y",
+                  "odpA": "3x + 4y",
+                  "odpB": "x + 2y",
+                  "odpC": "3x + 2y",
+                  "odpD": "x + 4y",
+                  "poprawna": "D"
+                },
+                {
+                  "kod": "p3/algebra/redukcja-wyrazow-podobnych#q5",
+                  "trudnosc": 1,
+                  "tresc": "Opuść nawias: 2(x - 3)",
+                  "odpA": "2x - 6",
+                  "odpB": "2x - 3",
+                  "odpC": "2x + 6",
+                  "odpD": "x - 6",
+                  "poprawna": "A"
+                },
+                {
+                  "kod": "p3/algebra/redukcja-wyrazow-podobnych#q6",
+                  "trudnosc": 2,
+                  "tresc": "Uprość: 5x + 2y - 3x + 4y",
+                  "odpA": "2x + 2y",
+                  "odpB": "2x + 6y",
+                  "odpC": "8x + 6y",
+                  "odpD": "2x - 2y",
+                  "poprawna": "B"
+                },
+                {
+                  "kod": "p3/algebra/redukcja-wyrazow-podobnych#q7",
+                  "trudnosc": 2,
+                  "tresc": "Oblicz wartość 3a - 2b dla a = 4 i b = 5",
+                  "odpA": "-2",
+                  "odpB": "22",
+                  "odpC": "2",
+                  "odpD": "7",
+                  "poprawna": "C"
+                },
+                {
+                  "kod": "p3/algebra/redukcja-wyrazow-podobnych#q8",
+                  "trudnosc": 2,
+                  "tresc": "Opuść nawias i uprość: 3(x + 2) - x",
+                  "odpA": "2x + 6",
+                  "odpB": "4x + 6",
+                  "odpC": "2x + 2",
+                  "odpD": "3x + 5",
+                  "poprawna": "A"
+                },
+                {
+                  "kod": "p3/algebra/redukcja-wyrazow-podobnych#q9",
+                  "trudnosc": 2,
+                  "tresc": "Uprość: 2(3x - 1) + 4x",
+                  "odpA": "10x - 1",
+                  "odpB": "9x - 2",
+                  "odpC": "10x + 2",
+                  "odpD": "10x - 2",
+                  "poprawna": "D"
+                },
+                {
+                  "kod": "p3/algebra/redukcja-wyrazow-podobnych#q10",
+                  "trudnosc": 3,
+                  "tresc": "Uprość: 4(2x - 3) - 3(x - 5)",
+                  "odpA": "5x - 27",
+                  "odpB": "5x + 3",
+                  "odpC": "11x + 3",
+                  "odpD": "5x - 3",
+                  "poprawna": "B"
+                },
+                {
+                  "kod": "p3/algebra/redukcja-wyrazow-podobnych#q11",
+                  "trudnosc": 3,
+                  "tresc": "Oblicz wartość x^2 - 3x dla x = -2",
+                  "odpA": "-2",
+                  "odpB": "-10",
+                  "odpC": "10",
+                  "odpD": "2",
+                  "poprawna": "C"
+                },
+                {
+                  "kod": "p3/algebra/redukcja-wyrazow-podobnych#q12",
+                  "trudnosc": 3,
+                  "tresc": "Obwód prostokąta o bokach (x + 3) i (2x - 1) wynosi",
+                  "odpA": "3x + 2",
+                  "odpB": "6x + 8",
+                  "odpC": "6x + 4",
+                  "odpD": "3x + 5",
+                  "poprawna": "C"
+                },
+                {
+                  "kod": "p3/algebra/redukcja-wyrazow-podobnych#q13",
+                  "trudnosc": 3,
+                  "tresc": "Wartość wyrażenia 2x + 3y dla x = 1,5 i y = -1 wynosi",
+                  "odpA": "0",
+                  "odpB": "6",
+                  "odpC": "-6",
+                  "odpD": "3",
+                  "poprawna": "A"
+                }
+              ],
+              "zadania": [
+                {
+                  "kod": "p3/algebra/redukcja-wyrazow-podobnych#z1",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "Uprość: 6x + 4x = []x",
+                  "odpowiedz": "10",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/algebra/redukcja-wyrazow-podobnych#z2",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "Oblicz wartość 4a + 1 dla a = 3: 4 * 3 + 1 = [] + 1 = []",
+                  "odpowiedz": "12;13",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/algebra/redukcja-wyrazow-podobnych#z3",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "Uprość: 5x + 2y - 3x + y = []x + []y",
+                  "odpowiedz": "2;3",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/algebra/redukcja-wyrazow-podobnych#z4",
+                  "rodzaj": "Czas",
+                  "tresc": "7x - 2x = []x",
+                  "odpowiedz": "5",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/algebra/redukcja-wyrazow-podobnych#z5",
+                  "rodzaj": "Czas",
+                  "tresc": "Wartość wyrażenia 2x + 5 dla x = 6 wynosi []",
+                  "odpowiedz": "17",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/algebra/redukcja-wyrazow-podobnych#z6",
+                  "rodzaj": "Czas",
+                  "tresc": "3(x + 4) = 3x + []",
+                  "odpowiedz": "12",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/algebra/redukcja-wyrazow-podobnych#z7",
+                  "rodzaj": "Blad",
+                  "tresc": "Uprość: 3x + 5y - x",
+                  "odpowiedz": "3x+5y-x=2x+5y|2x+5y|5y+2x",
+                  "wyjasnienie": "Wyrazy 3x i -x dają 2x, a nie 3x.",
+                  "bledneRozwiazanie": "3x + 5y - x|= 3x - x + 5y|= 3x + 5y"
+                },
+                {
+                  "kod": "p3/algebra/redukcja-wyrazow-podobnych#z8",
+                  "rodzaj": "Blad",
+                  "tresc": "Uprość: 2(x + 4) - 3",
+                  "odpowiedz": "2(x+4)-3=2x+5|2x+5|5+2x",
+                  "wyjasnienie": "Mnożymy przez 2 oba wyrazy w nawiasie: 2x + 8 - 3 = 2x + 5.",
+                  "bledneRozwiazanie": "2(x + 4) - 3|= 2x + 4 - 3|= 2x + 1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kod": "p3/rownania",
+          "nazwa": "Równania",
+          "opis": "Równania stopnia pierwszego z jedną niewiadomą oraz zadania tekstowe prowadzące do równań.",
+          "kategoria": "Rownania",
+          "lekcje": [
+            {
+              "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma",
+              "tytul": "Równania liniowe z jedną niewiadomą",
+              "wprowadzenie": "Równanie to zapis równości z niewiadomą. Rozwiązać je znaczy znaleźć liczbę, która je spełnia.",
+              "teoria": "<p><b>Równanie liniowe</b> ma postać ax + b = c.</p><p>Rozwiązujemy je, wykonując te same działania po obu stronach znaku równości, aż niewiadoma zostanie sama.</p><p>Rozwiązanie zawsze sprawdzamy, podstawiając je do równania.</p>",
+              "wzory": "x + a = b  =>  x = b - a|ax = b  =>  x = b / a",
+              "wskazowki": "Przenieś wyrazy z niewiadomą na jedną stronę.|Przenieś liczby na drugą stronę.|Podziel przez współczynnik przy x.",
+              "kolejnosc": 1,
+              "wymaganyWynik": 60,
+              "przyklady": [
+                {
+                  "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma#e1",
+                  "tresc": "Rozwiąż: 2x + 3 = 11",
+                  "rozwiazanie": "Odejmij 3 od obu stron: 2x = 8|Podziel obie strony przez 2: x = 4|Sprawdzenie: 2 * 4 + 3 = 11"
+                },
+                {
+                  "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma#e2",
+                  "tresc": "Rozwiąż: 5x - 4 = 2x + 8",
+                  "rozwiazanie": "Odejmij 2x od obu stron: 3x - 4 = 8|Dodaj 4 do obu stron: 3x = 12|Podziel przez 3: x = 4"
+                }
+              ],
+              "pytania": [
+                {
+                  "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma#q1",
+                  "trudnosc": 1,
+                  "tresc": "Rozwiąż: x + 7 = 12",
+                  "odpA": "5",
+                  "odpB": "19",
+                  "odpC": "7",
+                  "odpD": "4",
+                  "poprawna": "A"
+                },
+                {
+                  "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma#q2",
+                  "trudnosc": 1,
+                  "tresc": "Rozwiąż: 3x = 18",
+                  "odpA": "15",
+                  "odpB": "6",
+                  "odpC": "21",
+                  "odpD": "9",
+                  "poprawna": "B"
+                },
+                {
+                  "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma#q3",
+                  "trudnosc": 1,
+                  "tresc": "Rozwiąż: 2x - 5 = 9",
+                  "odpA": "2",
+                  "odpB": "14",
+                  "odpC": "7",
+                  "odpD": "4",
+                  "poprawna": "C"
+                },
+                {
+                  "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma#q4",
+                  "trudnosc": 1,
+                  "tresc": "Rozwiąż: 5x + 3 = 2x + 15",
+                  "odpA": "3",
+                  "odpB": "5",
+                  "odpC": "6",
+                  "odpD": "4",
+                  "poprawna": "D"
+                },
+                {
+                  "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma#q5",
+                  "trudnosc": 1,
+                  "tresc": "Rozwiąż: 4(x - 1) = 20",
+                  "odpA": "6",
+                  "odpB": "5",
+                  "odpC": "4",
+                  "odpD": "24",
+                  "poprawna": "A"
+                },
+                {
+                  "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma#q6",
+                  "trudnosc": 2,
+                  "tresc": "Rozwiąż: 3x + 4 = 19",
+                  "odpA": "7",
+                  "odpB": "5",
+                  "odpC": "15",
+                  "odpD": "3",
+                  "poprawna": "B"
+                },
+                {
+                  "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma#q7",
+                  "trudnosc": 2,
+                  "tresc": "Rozwiąż: 7x - 3 = 4x + 9",
+                  "odpA": "2",
+                  "odpB": "3",
+                  "odpC": "4",
+                  "odpD": "6",
+                  "poprawna": "C"
+                },
+                {
+                  "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma#q8",
+                  "trudnosc": 2,
+                  "tresc": "Rozwiąż: 2(x + 5) = 18",
+                  "odpA": "9",
+                  "odpB": "13",
+                  "odpC": "2",
+                  "odpD": "4",
+                  "poprawna": "D"
+                },
+                {
+                  "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma#q9",
+                  "trudnosc": 2,
+                  "tresc": "Rozwiąż: x / 3 + 2 = 6",
+                  "odpA": "12",
+                  "odpB": "2",
+                  "odpC": "18",
+                  "odpD": "10",
+                  "poprawna": "A"
+                },
+                {
+                  "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma#q10",
+                  "trudnosc": 3,
+                  "tresc": "Rozwiąż: 5(x - 2) = 3x + 6",
+                  "odpA": "3",
+                  "odpB": "8",
+                  "odpC": "-2",
+                  "odpD": "16",
+                  "poprawna": "B"
+                },
+                {
+                  "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma#q11",
+                  "trudnosc": 3,
+                  "tresc": "Suma trzech kolejnych liczb naturalnych wynosi 51. Najmniejsza z nich to",
+                  "odpA": "15",
+                  "odpB": "17",
+                  "odpC": "16",
+                  "odpD": "18",
+                  "poprawna": "C"
+                },
+                {
+                  "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma#q12",
+                  "trudnosc": 3,
+                  "tresc": "Rozwiąż: 4x - (x - 6) = 21",
+                  "odpA": "7",
+                  "odpB": "9",
+                  "odpC": "3",
+                  "odpD": "5",
+                  "poprawna": "D"
+                },
+                {
+                  "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma#q13",
+                  "trudnosc": 3,
+                  "tresc": "Obwód prostokąta wynosi 30 cm, a jeden bok ma 9 cm. Drugi bok ma",
+                  "odpA": "6 cm",
+                  "odpB": "12 cm",
+                  "odpC": "21 cm",
+                  "odpD": "3 cm",
+                  "poprawna": "A"
+                }
+              ],
+              "zadania": [
+                {
+                  "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma#z1",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "x + 9 = 15, więc x = []",
+                  "odpowiedz": "6",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma#z2",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "3x - 4 = 8, więc 3x = [] i x = []",
+                  "odpowiedz": "12;4",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma#z3",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "4x + 2 = 2x + 10, więc 2x = [] i x = []",
+                  "odpowiedz": "8;4",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma#z4",
+                  "rodzaj": "Czas",
+                  "tresc": "x - 8 = 5, więc x = []",
+                  "odpowiedz": "13",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma#z5",
+                  "rodzaj": "Czas",
+                  "tresc": "6x = 42, więc x = []",
+                  "odpowiedz": "7",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma#z6",
+                  "rodzaj": "Czas",
+                  "tresc": "2x + 4 = 16, więc x = []",
+                  "odpowiedz": "6",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma#z7",
+                  "rodzaj": "Blad",
+                  "tresc": "Rozwiąż: 2x + 3 = 11",
+                  "odpowiedz": "2x=11-3|2x=8",
+                  "wyjasnienie": "Przenosząc 3 na prawą stronę zmieniamy znak: 2x = 11 - 3 = 8, więc x = 4.",
+                  "bledneRozwiazanie": "2x + 3 = 11|2x = 11 + 3|2x = 14|x = 7"
+                },
+                {
+                  "kod": "p3/rownania/rownania-liniowe-z-jedna-niewiadoma#z8",
+                  "rodzaj": "Blad",
+                  "tresc": "Rozwiąż: 3(x - 1) = 12",
+                  "odpowiedz": "3x-3=12",
+                  "wyjasnienie": "Mnożymy przez 3 oba wyrazy w nawiasie: 3x - 3 = 12, więc x = 5.",
+                  "bledneRozwiazanie": "3(x - 1) = 12|3x - 1 = 12|3x = 13|x = 13/3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kod": "p3/geometria-plaska",
+          "nazwa": "Geometria płaska",
+          "opis": "Twierdzenie Pitagorasa i jego zastosowania, układ współrzędnych na płaszczyźnie.",
+          "kategoria": "Geometria",
+          "lekcje": []
+        },
+        {
+          "kod": "p3/geometria-przestrzenna",
+          "nazwa": "Geometria przestrzenna",
+          "opis": "Graniastosłupy i ostrosłupy: pola powierzchni i objętości.",
+          "kategoria": "Geometria",
+          "lekcje": []
+        },
+        {
+          "kod": "p3/statystyka-i-kombinatoryka",
+          "nazwa": "Statystyka i kombinatoryka",
+          "opis": "Średnia arytmetyczna, proste reguły zliczania, odczytywanie danych z wykresów i tabel.",
+          "kategoria": "Algebra",
+          "lekcje": []
+        }
+      ]
+    },
+    {
+      "kod": "p4",
+      "nazwa": "Szkoła średnia, poziom podstawowy",
+      "typSzkoly": "Szkoła średnia",
+      "zakres": "Matura podstawowa",
+      "kolejnosc": 4,
+      "opis": "Przygotowanie do obowiązkowej matury z matematyki. Nacisk na zastosowania praktyczne, funkcje i analityczne myślenie.",
+      "dzialy": [
+        {
+          "kod": "p4/liczby-rzeczywiste",
+          "nazwa": "Liczby rzeczywiste",
+          "opis": "Prawa działań, logarytmy, błąd względny i bezwzględny, przedziały liczbowe, wartość bezwzględna.",
+          "kategoria": "Algebra",
+          "lekcje": []
+        },
+        {
+          "kod": "p4/wyrazenia-algebraiczne",
+          "nazwa": "Wyrażenia algebraiczne",
+          "opis": "Wzory skróconego mnożenia, dzielenie sum algebraicznych, przekształcanie wzorów.",
+          "kategoria": "Algebra",
+          "lekcje": []
+        },
+        {
+          "kod": "p4/rownania-i-nierownosci",
+          "nazwa": "Równania i nierówności",
+          "opis": "Równania i nierówności kwadratowe, równania wymierne, układy równań liniowych.",
+          "kategoria": "Rownania",
+          "lekcje": []
+        },
+        {
+          "kod": "p4/funkcje",
+          "nazwa": "Funkcje",
+          "opis": "Pojęcie funkcji, dziedzina i zbiór wartości, funkcja liniowa, kwadratowa i wykładnicza.",
+          "kategoria": "Algebra",
+          "lekcje": [
+            {
+              "kod": "p4/funkcje/funkcja-liniowa",
+              "tytul": "Funkcja liniowa",
+              "kolejnosc": 1,
+              "wymaganyWynik": 60,
+              "wprowadzenie": "Funkcja liniowa opisuje zależności, w których wartość zmienia się o stałą wielkość.",
+              "teoria": "<p><b>Funkcja liniowa</b> ma wzór y = ax + b. Jej wykresem jest prosta.</p><p>Współczynnik <b>a</b> to nachylenie prostej: dla a &gt; 0 funkcja rośnie, dla a &lt; 0 maleje, dla a = 0 jest stała.</p><p>Liczba <b>b</b> to wartość funkcji dla x = 0, czyli punkt przecięcia z osią Y. Miejsce zerowe wyznaczamy z równania ax + b = 0.</p>",
+              "wzory": "y = ax + b|miejsce zerowe: x = -b / a|a = (y2 - y1) / (x2 - x1)",
+              "wskazowki": "Podstaw wartość x do wzoru.|Przy miejscu zerowym przyjmij y = 0.|Znak a mówi, czy funkcja rośnie, czy maleje.",
+              "przyklady": [
+                {
+                  "kod": "p4/funkcje/funkcja-liniowa#e1",
+                  "tresc": "Dla f(x) = 2x + 1 oblicz f(3)",
+                  "rozwiazanie": "Podstaw x = 3: f(3) = 2 * 3 + 1|Pomnóż: 6 + 1|Wynik: 7"
+                },
+                {
+                  "kod": "p4/funkcje/funkcja-liniowa#e2",
+                  "tresc": "Wyznacz miejsce zerowe funkcji f(x) = 2x - 6",
+                  "rozwiazanie": "Przyjmij f(x) = 0: 2x - 6 = 0|Dodaj 6: 2x = 6|Podziel przez 2: x = 3"
+                }
+              ],
+              "pytania": [
+                {
+                  "kod": "p4/funkcje/funkcja-liniowa#q1",
+                  "trudnosc": 1,
+                  "tresc": "Dla f(x) = 3x + 2 wartość f(1) wynosi",
+                  "odpA": "4",
+                  "odpB": "5",
+                  "odpC": "6",
+                  "odpD": "3",
+                  "poprawna": "B"
+                },
+                {
+                  "kod": "p4/funkcje/funkcja-liniowa#q2",
+                  "trudnosc": 1,
+                  "tresc": "Funkcja f(x) = -2x + 5 jest",
+                  "odpA": "stała",
+                  "odpB": "rosnąca",
+                  "odpC": "kwadratowa",
+                  "odpD": "malejąca",
+                  "poprawna": "D"
+                },
+                {
+                  "kod": "p4/funkcje/funkcja-liniowa#q3",
+                  "trudnosc": 2,
+                  "tresc": "Miejsce zerowe funkcji f(x) = 2x - 8 to",
+                  "odpA": "-4",
+                  "odpB": "8",
+                  "odpC": "4",
+                  "odpD": "-8",
+                  "poprawna": "C"
+                },
+                {
+                  "kod": "p4/funkcje/funkcja-liniowa#q4",
+                  "trudnosc": 2,
+                  "tresc": "Wykres funkcji y = x + 3 przecina oś Y w punkcie",
+                  "odpA": "(3, 0)",
+                  "odpB": "(0, 3)",
+                  "odpC": "(0, -3)",
+                  "odpD": "(-3, 0)",
+                  "poprawna": "B"
+                },
+                {
+                  "kod": "p4/funkcje/funkcja-liniowa#q5",
+                  "trudnosc": 3,
+                  "tresc": "Wykres funkcji liniowej przechodzi przez punkty (0, 1) i (2, 5). Jej wzór to",
+                  "odpA": "y = 2x + 1",
+                  "odpB": "y = x + 1",
+                  "odpC": "y = 2x + 5",
+                  "odpD": "y = 4x + 1",
+                  "poprawna": "A"
+                },
+                {
+                  "kod": "p4/funkcje/funkcja-liniowa#q6",
+                  "trudnosc": 3,
+                  "tresc": "Dla jakiego x funkcja f(x) = 3x - 4 przyjmuje wartość 8?",
+                  "odpA": "x = 12",
+                  "odpB": "x = 3",
+                  "odpC": "x = 4",
+                  "odpD": "x = 2",
+                  "poprawna": "C"
+                }
+              ],
+              "zadania": [
+                {
+                  "kod": "p4/funkcje/funkcja-liniowa#z1",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "f(x) = 2x + 3, więc f(4) = 2 * 4 + 3 = []",
+                  "odpowiedz": "11",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p4/funkcje/funkcja-liniowa#z2",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "f(x) = x - 5, więc f(9) = []",
+                  "odpowiedz": "4",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p4/funkcje/funkcja-liniowa#z3",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "Miejsce zerowe f(x) = 3x - 12: 3x = [], x = []",
+                  "odpowiedz": "12;4",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p4/funkcje/funkcja-liniowa#z4",
+                  "rodzaj": "Czas",
+                  "tresc": "f(x) = 4x, więc f(5) = []",
+                  "odpowiedz": "20",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p4/funkcje/funkcja-liniowa#z5",
+                  "rodzaj": "Czas",
+                  "tresc": "f(x) = x + 7, więc f(3) = []",
+                  "odpowiedz": "10",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p4/funkcje/funkcja-liniowa#z6",
+                  "rodzaj": "Czas",
+                  "tresc": "f(x) = 2x - 1, więc f(0) = []",
+                  "odpowiedz": "-1",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p4/funkcje/funkcja-liniowa#z7",
+                  "rodzaj": "Blad",
+                  "tresc": "Oblicz f(2) dla f(x) = 3x - 4",
+                  "odpowiedz": "f(2)=6-4=2|f(2)=2|6-4=2|2",
+                  "wyjasnienie": "6 - 4 = 2, więc f(2) = 2.",
+                  "bledneRozwiazanie": "f(2) = 3 * 2 - 4|f(2) = 6 - 4|f(2) = 3"
+                },
+                {
+                  "kod": "p4/funkcje/funkcja-liniowa#z8",
+                  "rodzaj": "Blad",
+                  "tresc": "Wyznacz miejsce zerowe f(x) = 2x + 6",
+                  "odpowiedz": "2x=-6|x=-3",
+                  "wyjasnienie": "Przenosząc 6 na prawą stronę zmieniamy znak: 2x = -6, więc x = -3.",
+                  "bledneRozwiazanie": "2x + 6 = 0|2x = 6|x = 3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kod": "p4/ciagi-liczbowe",
+          "nazwa": "Ciągi liczbowe",
+          "opis": "Ciąg arytmetyczny i geometryczny: wzory na n-ty wyraz oraz sumę n pierwszych wyrazów.",
+          "kategoria": "Algebra",
+          "lekcje": []
+        },
+        {
+          "kod": "p4/trygonometria",
+          "nazwa": "Trygonometria",
+          "opis": "Sinus, kosinus i tangens kąta ostrego, podstawowe tożsamości trygonometryczne.",
+          "kategoria": "Geometria",
+          "lekcje": []
+        },
+        {
+          "kod": "p4/geometria-analityczna",
+          "nazwa": "Geometria analityczna",
+          "opis": "Równanie prostej, równoległość i prostopadłość, odległość punktów, środek odcinka.",
+          "kategoria": "Geometria",
+          "lekcje": []
+        },
+        {
+          "kod": "p4/planimetria",
+          "nazwa": "Planimetria",
+          "opis": "Okręgi i koła, kąty w okręgu, podobieństwo trójkątów, twierdzenie Talesa.",
+          "kategoria": "Geometria",
+          "lekcje": []
+        },
+        {
+          "kod": "p4/stereometria",
+          "nazwa": "Stereometria",
+          "opis": "Kąty w przestrzeni, pola powierzchni i objętości brył obrotowych i wielościanów.",
+          "kategoria": "Geometria",
+          "lekcje": []
+        },
+        {
+          "kod": "p4/kombinatoryka-i-prawdopodobienstwo",
+          "nazwa": "Kombinatoryka i prawdopodobieństwo",
+          "opis": "Reguła mnożenia i dodawania, klasyczna definicja prawdopodobieństwa.",
+          "kategoria": "Algebra",
+          "lekcje": []
+        },
+        {
+          "kod": "p4/statystyka",
+          "nazwa": "Statystyka",
+          "opis": "Średnia ważona, mediana, moda, odchylenie standardowe.",
+          "kategoria": "Algebra",
+          "lekcje": []
+        }
+      ]
+    },
+    {
+      "kod": "p5",
+      "nazwa": "Szkoła średnia, poziom rozszerzony",
+      "typSzkoly": "Szkoła średnia",
+      "zakres": "Matura rozszerzona",
+      "kolejnosc": 5,
+      "opis": "Dla profili matematyczno-fizycznych, politechnicznych i ekonomicznych. Wyższa matematyka i dowodzenie twierdzeń.",
+      "dzialy": [
+        {
+          "kod": "p5/teoria-liczb-i-logika",
+          "nazwa": "Teoria liczb i logika",
+          "opis": "Elementy logiki, dowody wprost i niewprost, podzielność wielomianów, twierdzenie o reszcie.",
+          "kategoria": "Algebra",
+          "lekcje": []
+        },
+        {
+          "kod": "p5/wartosc-bezwzgledna",
+          "nazwa": "Wartość bezwzględna",
+          "opis": "Równania i nierówności z wieloma wartościami bezwzględnymi, wykresy funkcji z wartością bezwzględną.",
+          "kategoria": "Algebra",
+          "lekcje": []
+        },
+        {
+          "kod": "p5/rownania-i-nierownosci-z-parametrem",
+          "nazwa": "Równania i nierówności z parametrem",
+          "opis": "Liczba rozwiązań równań kwadratowych w zależności od parametru, wzory Viete'a.",
+          "kategoria": "Rownania",
+          "lekcje": []
+        },
+        {
+          "kod": "p5/wielomiany-i-funkcje-wymierne",
+          "nazwa": "Wielomiany i funkcje wymierne",
+          "opis": "Działania na wielomianach, równania i nierówności wielomianowe oraz wymierne.",
+          "kategoria": "Algebra",
+          "lekcje": []
+        },
+        {
+          "kod": "p5/trygonometria-rozszerzona",
+          "nazwa": "Trygonometria rozszerzona",
+          "opis": "Funkcje dowolnego kąta, wykresy, wzory na sumy i różnice kątów, równania trygonometryczne.",
+          "kategoria": "Geometria",
+          "lekcje": []
+        },
+        {
+          "kod": "p5/geometria-analityczna-i-planimetria",
+          "nazwa": "Geometria analityczna i planimetria",
+          "opis": "Równanie okręgu, odległość punktu od prostej, twierdzenia sinusów i kosinusów.",
+          "kategoria": "Geometria",
+          "lekcje": []
+        },
+        {
+          "kod": "p5/ciagi-i-granice",
+          "nazwa": "Ciągi i granice",
+          "opis": "Granica ciągu, suma nieskończonego ciągu geometrycznego.",
+          "kategoria": "Algebra",
+          "lekcje": []
+        },
+        {
+          "kod": "p5/rachunek-rozniczkowy",
+          "nazwa": "Rachunek różniczkowy",
+          "opis": "Granica funkcji, pochodna, ekstrema lokalne, monotoniczność, zadania optymalizacyjne.",
+          "kategoria": "Algebra",
+          "lekcje": [
+            {
+              "kod": "p5/rachunek-rozniczkowy/pochodna-funkcji-potegowej",
+              "tytul": "Pochodna funkcji potęgowej",
+              "kolejnosc": 1,
+              "wymaganyWynik": 60,
+              "wprowadzenie": "Pochodna opisuje szybkość zmian funkcji i pozwala szukać jej największych oraz najmniejszych wartości.",
+              "teoria": "<p><b>Pochodna</b> funkcji opisuje szybkość jej zmian. Dla funkcji f(x) = x<sup>n</sup> pochodna wynosi f'(x) = n · x<sup>n-1</sup>.</p><p>Pochodna stałej jest równa 0, a pochodna sumy to suma pochodnych. Czynnik stały można wyłączyć przed pochodną.</p><p>Ekstrema lokalne szukamy tam, gdzie pochodna zmienia znak, w szczególności tam, gdzie f'(x) = 0.</p>",
+              "wzory": "(x^n)' = n * x^(n - 1)|(c)' = 0|(a * f(x))' = a * f'(x)|(f + g)' = f' + g'",
+              "wskazowki": "Zapisz funkcję jako sumę składników.|Dla każdego składnika pomnóż przez wykładnik i zmniejsz go o 1.|Pochodna liczby jest równa 0.",
+              "przyklady": [
+                {
+                  "kod": "p5/rachunek-rozniczkowy/pochodna-funkcji-potegowej#e1",
+                  "tresc": "Oblicz pochodną f(x) = x^3 + 4x",
+                  "rozwiazanie": "Pochodna x^3 to 3x^2|Pochodna 4x to 4|Wynik: f'(x) = 3x^2 + 4"
+                },
+                {
+                  "kod": "p5/rachunek-rozniczkowy/pochodna-funkcji-potegowej#e2",
+                  "tresc": "Znajdź punkt, w którym f(x) = x^2 - 6x ma ekstremum",
+                  "rozwiazanie": "Oblicz pochodną: f'(x) = 2x - 6|Przyrównaj do zera: 2x - 6 = 0|Rozwiąż: x = 3"
+                }
+              ],
+              "pytania": [
+                {
+                  "kod": "p5/rachunek-rozniczkowy/pochodna-funkcji-potegowej#q1",
+                  "trudnosc": 1,
+                  "tresc": "Pochodna funkcji f(x) = x^2 to",
+                  "odpA": "2",
+                  "odpB": "x",
+                  "odpC": "2x",
+                  "odpD": "x^2",
+                  "poprawna": "C"
+                },
+                {
+                  "kod": "p5/rachunek-rozniczkowy/pochodna-funkcji-potegowej#q2",
+                  "trudnosc": 1,
+                  "tresc": "Pochodna stałej funkcji f(x) = 7 wynosi",
+                  "odpA": "7",
+                  "odpB": "0",
+                  "odpC": "1",
+                  "odpD": "x",
+                  "poprawna": "B"
+                },
+                {
+                  "kod": "p5/rachunek-rozniczkowy/pochodna-funkcji-potegowej#q3",
+                  "trudnosc": 2,
+                  "tresc": "Pochodna funkcji f(x) = 3x^2 to",
+                  "odpA": "3x",
+                  "odpB": "6x",
+                  "odpC": "6",
+                  "odpD": "9x",
+                  "poprawna": "B"
+                },
+                {
+                  "kod": "p5/rachunek-rozniczkowy/pochodna-funkcji-potegowej#q4",
+                  "trudnosc": 2,
+                  "tresc": "Pochodna funkcji f(x) = x^3 + 5x to",
+                  "odpA": "3x^2 + 5",
+                  "odpB": "3x + 5",
+                  "odpC": "x^2 + 5",
+                  "odpD": "3x^2 + 5x",
+                  "poprawna": "A"
+                },
+                {
+                  "kod": "p5/rachunek-rozniczkowy/pochodna-funkcji-potegowej#q5",
+                  "trudnosc": 3,
+                  "tresc": "Funkcja f(x) = x^2 - 4x ma ekstremum lokalne dla x równego",
+                  "odpA": "x = -2",
+                  "odpB": "x = 4",
+                  "odpC": "x = 2",
+                  "odpD": "x = 0",
+                  "poprawna": "C"
+                },
+                {
+                  "kod": "p5/rachunek-rozniczkowy/pochodna-funkcji-potegowej#q6",
+                  "trudnosc": 3,
+                  "tresc": "Wartość pochodnej funkcji f(x) = x^3 w punkcie x = 2 wynosi",
+                  "odpA": "6",
+                  "odpB": "8",
+                  "odpC": "4",
+                  "odpD": "12",
+                  "poprawna": "D"
+                }
+              ],
+              "zadania": [
+                {
+                  "kod": "p5/rachunek-rozniczkowy/pochodna-funkcji-potegowej#z1",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "(x^4)' = []x^[]",
+                  "odpowiedz": "4;3",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p5/rachunek-rozniczkowy/pochodna-funkcji-potegowej#z2",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "(5x^2)' = []x",
+                  "odpowiedz": "10",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p5/rachunek-rozniczkowy/pochodna-funkcji-potegowej#z3",
+                  "rodzaj": "Wypelnij",
+                  "tresc": "(x^2 - 6x)' = 2x - []",
+                  "odpowiedz": "6",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p5/rachunek-rozniczkowy/pochodna-funkcji-potegowej#z4",
+                  "rodzaj": "Czas",
+                  "tresc": "(x^2)' = []x",
+                  "odpowiedz": "2",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p5/rachunek-rozniczkowy/pochodna-funkcji-potegowej#z5",
+                  "rodzaj": "Czas",
+                  "tresc": "(x^3)' = 3x^[]",
+                  "odpowiedz": "2",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p5/rachunek-rozniczkowy/pochodna-funkcji-potegowej#z6",
+                  "rodzaj": "Czas",
+                  "tresc": "(9)' = []",
+                  "odpowiedz": "0",
+                  "wyjasnienie": null,
+                  "bledneRozwiazanie": null
+                },
+                {
+                  "kod": "p5/rachunek-rozniczkowy/pochodna-funkcji-potegowej#z7",
+                  "rodzaj": "Blad",
+                  "tresc": "Oblicz pochodną f(x) = x^3",
+                  "odpowiedz": "f'(x)=3x^2|3x^2",
+                  "wyjasnienie": "Wykładnik zmniejszamy o 1: pochodna x^3 to 3x^2.",
+                  "bledneRozwiazanie": "f(x) = x^3|f'(x) = 3 * x^3|f'(x) = 3x^3"
+                },
+                {
+                  "kod": "p5/rachunek-rozniczkowy/pochodna-funkcji-potegowej#z8",
+                  "rodzaj": "Blad",
+                  "tresc": "Oblicz pochodną f(x) = 2x^2 + 5",
+                  "odpowiedz": "f'(x)=4x|4x",
+                  "wyjasnienie": "Pochodna stałej 5 jest równa 0, więc f'(x) = 4x.",
+                  "bledneRozwiazanie": "f(x) = 2x^2 + 5|f'(x) = 4x + 5"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kod": "p5/kombinatoryka-i-prawdopodobienstwo",
+          "nazwa": "Kombinatoryka i prawdopodobieństwo",
+          "opis": "Silnia, permutacje, kombinacje, wariacje, prawdopodobieństwo warunkowe i całkowite.",
+          "kategoria": "Algebra",
+          "lekcje": []
+        }
+      ]
+    }
+  ]
+}

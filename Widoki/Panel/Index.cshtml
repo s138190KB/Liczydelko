@@ -1,0 +1,111 @@
+﻿@model ModelPanelu
+@{
+    var uczen = Model.Uzytkownik;
+    var nastepny = Model.Leveli.FirstOrDefault(level => level.Numer == uczen.Level + 1);
+    string karta = ViewBag.Karta;
+    var ukonczenie = Model.Wszystkie == 0 ? 0 : 100 * Model.Zaliczone / Model.Wszystkie;
+    var seria = Liczydelko.Serwisy.PostepSerwis.AktualnaSeria(uczen.SeriaDni, ViewBag.OstatniQuiz as DateTime?);
+}
+<section class="karta profil-glowa">
+    <div class="awatar-duzy">
+        @if (Model.MaAwatar)
+        {
+            <img src="@Url.Action("Awatar")" alt="Awatar użytkownika" />
+        }
+        else
+        {
+            <span>@uczen.Nick.Substring(0, 1).ToUpper()</span>
+        }
+    </div>
+    <div class="profil-opis">
+        <h1>@uczen.Nick</h1>
+        <p><span class="odznaka-level">@Model.Aktualny.Nazwa</span></p>
+        <p class="meta">Punkty: <b>@uczen.Punkty</b> &middot; Seria dni: <b>@seria</b> &middot; Zaliczone lekcje: <b>@Model.Zaliczone z @Model.Wszystkie</b></p>
+    </div>
+</section>
+
+<form method="get" asp-controller="Panel" asp-action="Index" class="karty-przyciski">
+    <button name="karta" value="przeglad" class="@(karta == "przeglad" ? "aktywny" : "")">Przegląd</button>
+    <button name="karta" value="konto" class="@(karta == "konto" ? "aktywny" : "")">Konto</button>
+</form>
+
+@if (karta == "konto")
+{
+    if (TempData["Info"] is string info)
+    {
+        <p class="komunikat ok">@info</p>
+    }
+    if (TempData["Blad"] is string blad)
+    {
+        <p class="komunikat zle">@blad</p>
+    }
+    @await Html.PartialAsync("_KontoKarty", Model)
+}
+else
+{
+    <section class="karta">
+        <h2>Co dalej?</h2>
+        <p>@Model.Rekomendacja.Tekst</p>
+        @if (Model.Rekomendacja.LekcjaId != null)
+        {
+            <a class="przycisk akcent" asp-controller="Nauka" asp-action="Lekcja" asp-route-id="@Model.Rekomendacja.LekcjaId">Przejdź do lekcji</a>
+        }
+        else if (Model.Rekomendacja.Powtorka)
+        {
+            <a class="przycisk akcent" asp-controller="Nauka" asp-action="PowtorzBledy">Zacznij powtórkę</a>
+        }
+    </section>
+
+    <div class="dwie">
+        <section class="karta">
+            <h2>Postęp w nauce</h2>
+            <p class="meta">Zaliczone lekcje: @Model.Zaliczone z @Model.Wszystkie (@ukonczenie%)</p>
+            <div class="pasek"><div style="width:@(ukonczenie)%"></div></div>
+            @if (Model.Powtorki > 0)
+            {
+                <p>Pytania czekające na powtórkę: <b>@Model.Powtorki</b>. <a asp-controller="Nauka" asp-action="PowtorzBledy">Powtórz je teraz</a></p>
+            }
+            <p><a asp-controller="Nauka" asp-action="Powtorka">Zobacz raport z wyników</a></p>
+        </section>
+
+        <section class="karta">
+            <h2>Levele</h2>
+            @if (nastepny != null)
+            {
+                <p class="meta">Następny level: <b>@nastepny.Nazwa</b></p>
+            }
+            else if (Model.Leveli.Count > 0)
+            {
+                <p class="meta">Masz już najwyższy level.</p>
+            }
+            @foreach (var level in Model.Leveli)
+            {
+                <p><b>@level.Nazwa</b> <span class="meta">(level @level.Numer): @level.Zrobione z @level.Wymagane lekcji</span></p>
+                <div class="pasek"><div style="width:@(level.Procent)%"></div></div>
+            }
+        </section>
+    </div>
+
+    <section class="karta">
+        <h2>Odznaki</h2>
+        <div class="siatka">
+            @foreach (var odznaka in Model.Odznaki)
+            {
+                <div class="dzial @(odznaka.Zdobyta ? "aktywny" : "")">
+                    <b>@odznaka.Ikona @odznaka.Nazwa</b>
+                    <p class="meta">@odznaka.Opis</p>
+                    <p class="meta">
+                        @if (odznaka.Zdobyta && odznaka.Data != null)
+                        {
+                            <text>Zdobyta: @Liczydelko.Serwisy.Czas.Lokalny(odznaka.Data.Value).ToString("dd.MM.yyyy")</text>
+                        }
+                        else
+                        {
+                            <text>Jeszcze niezdobyta</text>
+                        }
+                    </p>
+                </div>
+            }
+        </div>
+    </section>
+}

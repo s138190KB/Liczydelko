@@ -1,0 +1,65 @@
+﻿@model List<PoziomEdukacyjny>
+@{
+    ViewData["Baner"] = "duzy";
+    var zal = (HashSet<int>)ViewBag.Zaliczone;
+    var wszystkie = (List<PoziomEdukacyjny>)ViewBag.Wszystkie;
+    int? wybrany = ViewBag.Poziom;
+}
+<div id="materialy" class="naglowek-sekcji">
+    <h2>Materiały do nauki</h2>
+    <form method="get" class="filtr">
+        <label>
+            Etap nauczania
+            <select name="poziom" onchange="this.form.submit()">
+                <option value="">Wszystkie etapy</option>
+                @foreach (var p in wszystkie)
+                {
+                    <option value="@p.Kolejnosc" selected="@(wybrany == p.Kolejnosc)">@p.Nazwa</option>
+                }
+            </select>
+        </label>
+    </form>
+</div>
+<p class="meta">Materiały są dostępne dla wszystkich. Quizy wymagają zalogowania.</p>
+
+@foreach (var etap in Model)
+{
+    <section class="karta etap etap-@(etap.Kolejnosc % 2)">
+        <div class="etap-glowa">
+            <span class="etap-numer">@etap.Kolejnosc</span>
+            <div>
+                <h2>@etap.Nazwa</h2>
+                <p class="meta">@etap.Opis</p>
+            </div>
+        </div>
+        <div class="siatka">
+            @foreach (var dzial in etap.Dzialy)
+            {
+                var lekcje = dzial.Lekcje.OrderBy(x => x.Kolejnosc).ToList();
+                <div class="dzial @(lekcje.Count > 0 ? "aktywny" : "")">
+                    <h3>@dzial.Nazwa</h3>
+                    <p class="opis-dzialu">@dzial.Opis</p>
+                    @if (lekcje.Count == 0)
+                    {
+                        <span class="wkrotce">Wkrótce</span>
+                    }
+                    else
+                    {
+                        <ul class="lista">
+                            @foreach (var l in lekcje)
+                            {
+                                <li>
+                                    <a asp-action="Lekcja" asp-route-id="@l.Id">@l.Tytul</a>
+                                    @if (zal.Contains(l.Id))
+                                    {
+                                        <span class="znacznik">ukończona</span>
+                                    }
+                                </li>
+                            }
+                        </ul>
+                    }
+                </div>
+            }
+        </div>
+    </section>
+}

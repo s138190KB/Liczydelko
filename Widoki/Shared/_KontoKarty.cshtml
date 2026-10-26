@@ -1,0 +1,37 @@
+﻿@model ModelPanelu
+<div class="dwie">
+    <div class="karta">
+        <h2>Awatar</h2>
+        <form method="post" asp-controller="Panel" asp-action="UstawAwatar" asp-antiforgery="true" enctype="multipart/form-data">
+            <label>
+                Wybierz obraz (PNG, JPG, GIF lub WEBP, do 1 MB)
+                <input type="file" name="plik" accept="image/png,image/jpeg,image/gif,image/webp" required />
+            </label>
+            <button class="przycisk">Zapisz awatar</button>
+        </form>
+        @if (Model.MaAwatar)
+        {
+            <form method="post" asp-controller="Panel" asp-action="UsunAwatar" asp-antiforgery="true">
+                <button class="przycisk jasny">Usuń awatar</button>
+            </form>
+        }
+    </div>
+    <div class="karta">
+        <h2>Zmiana hasła</h2>
+        <form method="post" asp-controller="Panel" asp-action="ZmienHaslo" asp-antiforgery="true">
+            <label>Aktualne hasło <input type="password" name="stare" required autocomplete="current-password" /></label>
+            <label>Nowe hasło (min. 6 znaków) <input type="password" name="nowe" required minlength="6" autocomplete="new-password" /></label>
+            <label>Powtórz nowe hasło <input type="password" name="powtorz" required minlength="6" autocomplete="new-password" /></label>
+            <button class="przycisk">Zmień hasło</button>
+        </form>
+    </div>
+    <div class="karta">
+        <h2>Usuń konto</h2>
+        <p class="meta">Konto oraz wszystkie Twoje dane (postępy, wyniki, odznaki, awatar) zostaną trwale usunięte. Tej operacji nie można cofnąć.</p>
+        <form method="post" asp-controller="Panel" asp-action="UsunKonto" asp-antiforgery="true"
+              onsubmit="return confirm('Na pewno usunąć konto? Tej operacji nie można cofnąć.');">
+            <label>Hasło (potwierdzenie) <input type="password" name="haslo" required autocomplete="current-password" /></label>
+            <button class="przycisk jasny">Usuń konto</button>
+        </form>
+    </div>
+</div>

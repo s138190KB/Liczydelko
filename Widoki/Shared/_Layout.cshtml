@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#4c1d95" />
+    <title>Liczydełko</title>
+    <link rel="stylesheet" href="~/css/strona.css" asp-append-version="true" />
+    <meta name="csrf-token" content="@Xsrf.GetAndStoreTokens(Context).RequestToken" />
+</head>
+<body>
+    @{
+        var duzy = ViewData["Baner"] is "duzy";
+        var zalogowany = User.Identity?.IsAuthenticated == true;
+        var nick = User.Identity?.Name ?? "";
+        var inicjal = nick.Length == 0 ? "" : new System.Globalization.StringInfo(nick).SubstringByTextElements(0, 1).ToUpperInvariant();
+        string[] symbole = ["+", "×", "π", "%", "√", "=", "÷", "x²", "-", "≈"];
+    }
+    <header class="gora">
+        <div class="gora-wnetrze">
+            <a class="logo" asp-controller="Nauka" asp-action="Index"><span class="logo-znak">L</span>Liczydełko</a>
+            <button type="button" class="hamb" id="hamb" aria-label="Menu" aria-controls="menu" aria-expanded="false"><span></span><span></span><span></span></button>
+            <nav id="menu">
+                <a asp-controller="Nauka" asp-action="Index">Lekcje</a>
+                <a asp-controller="Nauka" asp-action="Ranking">Ranking</a>
+                @if (zalogowany)
+                {
+                    <a asp-controller="Panel" asp-action="Index">Panel ucznia</a>
+                    <a asp-controller="Nauka" asp-action="Powtorka">Powtórka</a>
+                    <a class="profil-link" asp-controller="Panel" asp-action="Index" asp-route-karta="konto">
+                        @if (User.HasClaim("awatar", "1"))
+                        {
+                            <img class="awatar-mini" src="@Url.Action("Awatar", "Panel")" alt="" />
+                        }
+                        else
+                        {
+                            <span class="awatar-mini">@inicjal</span>
+                        }
+                        @nick
+                    </a>
+                    <form asp-controller="Konto" asp-action="Wyloguj" method="post" class="wiersz">
+                        <button class="link">Wyloguj</button>
+                    </form>
+                }
+                else
+                {
+                    <a asp-controller="Konto" asp-action="Logowanie">Zaloguj</a>
+                    <a class="przycisk akcent maly" asp-controller="Konto" asp-action="Rejestracja">Utwórz konto</a>
+                }
+            </nav>
+        </div>
+    </header>
+
+    <section class="baner @(duzy ? "duzy" : "maly")">
+        <div class="symbole" aria-hidden="true">
+            @for (var i = 0; i < symbole.Length; i++)
+            {
+                <span style="--i:@i;--t:@((i * 37) % 70 + 5)%">@symbole[i]</span>
+            }
+        </div>
+        <div class="baner-wnetrze">
+            @if (duzy)
+            {
+                <div class="baner-tekst">
+                    <h1>Ucz się matematyki w swoim tempie</h1>
+                    <p>Teoria, zadania, zadania na czas, znajdź błąd i quizy na trzech poziomach trudności. Od klas 1-3 szkoły podstawowej po poziom rozszerzony.</p>
+                    @if (zalogowany)
+                    {
+                        <a class="przycisk akcent" asp-controller="Panel" asp-action="Index">Przejdź do panelu</a>
+                    }
+                    else
+                    {
+                        <a class="przycisk akcent" asp-controller="Konto" asp-action="Rejestracja">Utwórz darmowe konto</a>
+                    }
+                    <a class="przycisk przezroczysty" href="#materialy">Przeglądaj materiały</a>
+                </div>
+                <div class="baner-grafika">
+                    <div id="liczydlo"></div>
+                    <p class="liczydlo-podpis">Kliknij koraliki i policz!</p>
+                </div>
+            }
+            else
+            {
+                <div class="baner-pasek">Matematyka krok po kroku</div>
+            }
+        </div>
+    </section>
+
+    <main class="tresc">@RenderBody()</main>
+    <footer class="stopka">Liczydełko - platforma do nauki matematyki</footer>
+    <script src="~/js/wspolne.js" asp-append-version="true"></script>
+    <script src="~/js/quiz.js" asp-append-version="true"></script>
+    <script src="~/js/cwiczenia.js" asp-append-version="true"></script>
+    <script src="~/js/wykresy.js" asp-append-version="true"></script>
+</body>
+</html>

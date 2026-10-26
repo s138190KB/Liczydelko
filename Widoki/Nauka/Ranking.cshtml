@@ -1,0 +1,41 @@
+﻿@model ModelRankingu
+<h1>Ranking uczniów</h1>
+<p class="wstep">Dwadzieścia osób z największą liczbą punktów. Punkty zdobywasz za poprawne odpowiedzi w quizach i zadaniach.</p>
+<div class="karta">
+    @if (Model.Wiersze.Count == 0)
+    {
+        <p>Ranking jest jeszcze pusty. Załóż konto i zdobądź pierwsze punkty!</p>
+    }
+    else
+    {
+        <div class="przewijana">
+            <table class="tabela ranking">
+                <tr><th>Miejsce</th><th>Uczeń</th><th>Level</th><th>Seria dni</th><th>Punkty</th></tr>
+                @foreach (var w in Model.Wiersze)
+                {
+                    <tr class="@(w.CzyJa ? "moj" : "")">
+                        <td><span class="miejsce m@(w.Miejsce <= 3 ? w.Miejsce : 0)">@w.Miejsce</span></td>
+                        <td>@w.Nick @if (w.CzyJa) {
+                            <small>(to Ty)</small>
+                        }
+                    </td>
+                    <td>@w.NazwaLevelu</td>
+                    <td>@w.SeriaDni</td>
+                    <td>@w.Punkty</td>
+                </tr>
+            }
+            @if (Model.Moj != null)
+            {
+                <tr><td colspan="5" class="srodek meta">...</td></tr>
+                <tr class="moj">
+                    <td><span class="miejsce m0">@Model.Moj.Miejsce</span></td>
+                    <td>@Model.Moj.Nick <small>(to Ty)</small></td>
+                    <td>@Model.Moj.NazwaLevelu</td>
+                    <td>@Model.Moj.SeriaDni</td>
+                    <td>@Model.Moj.Punkty</td>
+                </tr>
+            }
+        </table>
+    </div>
+}
+</div>

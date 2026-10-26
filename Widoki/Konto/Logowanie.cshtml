@@ -1,0 +1,18 @@
+﻿<div class="karta waska">
+    <h1>Logowanie</h1>
+    <p class="meta">Zaloguj się, aby rozwiązywać quizy i zapisywać postępy.</p>
+    @if (TempData["Info"] is string info)
+    {
+        <p class="komunikat ok">@info</p>
+    }
+    @if (ViewBag.Blad != null)
+    {
+        <p class="komunikat zle">@ViewBag.Blad</p>
+    }
+    <form method="post" asp-antiforgery="true">
+        <label>E-mail <input type="email" name="email" required autocomplete="email" /></label>
+        <label>Hasło <input type="password" name="haslo" required autocomplete="current-password" /></label>
+        <button class="przycisk szeroki">Zaloguj</button>
+    </form>
+    <p class="srodek">Nie masz konta? <a asp-action="Rejestracja">Zarejestruj się</a></p>
+</div>

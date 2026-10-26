@@ -1,0 +1,109 @@
+﻿@model ModelLekcji
+@{
+    var l = Model.Lekcja;
+    string[] Dziel(string s) => (s ?? "").Split('|', StringSplitOptions.RemoveEmptyEntries);
+}
+<a class="powrot" asp-action="Index">Wróć do listy lekcji</a>
+<h1>@l.Tytul</h1>
+<p class="wstep">@l.Wprowadzenie</p>
+
+<div class="karta"><h2>Teoria</h2>@Html.Raw(l.Teoria)</div>
+
+@if (Dziel(l.Wzory).Length > 0)
+{
+    <div class="karta"><h2>Wzory</h2><ul class="wzory">@foreach (var w in Dziel(l.Wzory)) {
+        <li><code>@w</code></li>
+    }
+</ul></div>
+}
+@foreach (var p in l.Przyklady)
+{
+    <div class="karta">
+        <h3>Przykład</h3>
+        <p><b>@p.Tresc</b></p>
+        <ol class="kroki" id="przyklad-@p.Id">
+            @foreach (var k in Dziel(p.Rozwiazanie))
+            {
+                <li class="ukryty">@k</li>
+            }
+        </ol>
+        <button type="button" class="przycisk jasny" data-odkryj="#przyklad-@p.Id">Pokaż kolejny krok</button>
+    </div>
+}
+
+<h2 class="sekcja">Sprawdź, co umiesz</h2>
+@if (Model.Postep != null)
+{
+    var nazwy = new[] { "", "łatwy", "średni", "trudny" };
+    <div class="karta postep-lekcji">
+        <b>Twój postęp w tej lekcji</b>
+        <ul>
+            @foreach (var t in Model.Postep.WymaganeTrudnosci)
+            {
+                <li class="@(Model.Postep.ZaliczoneTrudnosci.Contains(t) ? "tak" : "")">Quiz, poziom @nazwy[t]: @(Model.Postep.ZaliczoneTrudnosci.Contains(t) ? "zaliczony" : "do zaliczenia")</li>
+            }
+            <li class="@(Model.Postep.ZadaniaPoprawne == Model.Postep.ZadaniaRazem ? "tak" : "")">Zadania rozwiązane poprawnie: @Model.Postep.ZadaniaPoprawne z @Model.Postep.ZadaniaRazem</li>
+        </ul>
+    </div>
+}
+<p class="meta">Wybierz jedną z form ćwiczeń. Zadania pojawiają się kolejno, jedno po drugim.</p>
+<div class="kafle-cw" id="kafle-cw">
+    <button type="button" class="kafel-cw k1" data-panel="panel-quiz">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20" /><path d="M18 19a6 6 0 1 1 9 5c-2 1-3 2-3 5" /><circle cx="24" cy="36" r="1.6" class="pelne" /></svg>
+        <b>Quiz</b><span>trzy poziomy trudności</span>
+    </button>
+    <button type="button" class="kafel-cw k2" data-panel="panel-wypelnij">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="14" width="14" height="20" rx="4" /><rect x="28" y="14" width="14" height="20" rx="4" /><path d="M22 24h4" /></svg>
+        <b>Uzupełnij okienka</b><span>wpisz brakujące liczby</span>
+    </button>
+    <button type="button" class="kafel-cw k3" data-panel="panel-czas">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="26" r="16" /><path d="M24 26V16M24 26l7 4M20 6h8" /></svg>
+        <b>Zadania na czas</b><span>30 sekund na zadanie</span>
+    </button>
+    <button type="button" class="kafel-cw k4" data-panel="panel-blad">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="21" cy="21" r="12" /><path d="M30 30l12 12M16 21h10" /></svg>
+        <b>Znajdź błąd</b><span>popraw złe rozwiązanie</span>
+    </button>
+</div>
+
+<div class="cw-panele">
+    <div class="cw-panel karta" id="panel-quiz" hidden>
+        <h2>Quiz</h2>
+        @if (User.IsInRole("uczen"))
+        {
+            @await Html.PartialAsync("_Quiz", new QuizModel { LekcjaId = l.Id, Pytania = Model.Pytania, Trudnosci = true, Polecany = Model.Polecana, Powod = Model.PowodPolecenia })
+        }
+        else
+        {
+            <p>Quiz jest dostępny tylko dla zalogowanych użytkowników. Zaloguj się, aby sprawdzić wiedzę i zbierać punkty.</p>
+            <a class="przycisk" asp-controller="Konto" asp-action="Logowanie">Zaloguj się</a>
+            <a class="przycisk jasny" asp-controller="Konto" asp-action="Rejestracja">Utwórz konto</a>
+        }
+    </div>
+    <div class="cw-panel karta" id="panel-wypelnij" hidden>
+        <h2>Uzupełnij okienka</h2>
+        @if (Dziel(l.Wskazowki).Length > 0)
+        {
+            <div class="podpowiedzi">
+                <b>Podpowiedzi</b>
+                <ol class="kroki" id="wskazowki">
+                    @foreach (var k in Dziel(l.Wskazowki))
+                    {
+                        <li class="ukryty">@k</li>
+                    }
+                </ol>
+                <button type="button" class="przycisk jasny maly-p" data-odkryj="#wskazowki">Pokaż podpowiedź</button>
+            </div>
+        }
+        <div id="cw-wypelnij"></div>
+    </div>
+    <div class="cw-panel karta" id="panel-czas" hidden>
+        <h2>Zadania na czas</h2>
+        <div id="cw-czas"></div>
+    </div>
+    <div class="cw-panel karta" id="panel-blad" hidden>
+        <h2>Znajdź błąd</h2>
+        <div id="cw-blad"></div>
+    </div>
+</div>
+<script id="dane-zadania" type="application/json">@Json.Serialize(Model.Zadania.Select(z => new { id = z.Id, rodzaj = z.Rodzaj, tresc = z.Tresc, bledne = z.BledneRozwiazanie }))</script>

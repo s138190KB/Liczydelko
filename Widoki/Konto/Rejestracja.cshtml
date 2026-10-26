@@ -1,0 +1,14 @@
+﻿<div class="karta waska">
+    <h1>Rejestracja</h1>
+    @if (ViewBag.Blad != null)
+    {
+        <p class="komunikat zle">@ViewBag.Blad</p>
+    }
+    <form method="post" asp-antiforgery="true">
+        <label>E-mail <input type="email" name="email" required autocomplete="email" /></label>
+        <label>Nick <input name="nick" required maxlength="30" autocomplete="nickname" /></label>
+        <label>Hasło (min. 6 znaków) <input type="password" name="haslo" required minlength="6" autocomplete="new-password" /></label>
+        <button class="przycisk szeroki">Utwórz konto</button>
+    </form>
+    <p class="srodek">Masz już konto? <a asp-action="Logowanie">Zaloguj się</a></p>
+</div>

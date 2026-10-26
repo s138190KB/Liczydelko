@@ -1,0 +1,21 @@
+﻿@model ModelLekcji
+@{
+    DateTime? najblizsza = ViewBag.Najblizsza;
+}
+<a class="powrot" asp-action="Powtorka">Wróć do raportu</a>
+<h1>Powtórka błędnych pytań</h1>
+<p class="wstep">Pytania, które wypadają dziś do powtórki. Poprawna odpowiedź przenosi pytanie do wyższego pudełka (kolejna powtórka za 1, 3, 7 i 14 dni), a błędna cofa je do pudełka pierwszego. Po pięciu poprawnych powtórkach pytanie uznajemy za opanowane.</p>
+<div class="karta">
+    @if (Model.Pytania.Count == 0)
+    {
+        <p>Nie masz dziś żadnych pytań do powtórki.</p>
+        @if (najblizsza != null)
+        {
+            <p class="meta">Najbliższa zaplanowana powtórka: @(Liczydelko.Serwisy.Czas.Lokalny(najblizsza.Value).ToString("dd.MM.yyyy HH:mm"))</p>
+        }
+    }
+    else
+    {
+        @await Html.PartialAsync("_Quiz", new QuizModel { LekcjaId = 0, Pytania = Model.Pytania, Trudnosci = false })
+    }
+</div>

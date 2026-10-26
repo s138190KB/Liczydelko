@@ -1,0 +1,108 @@
+﻿@model RaportDto
+<h1>Powtórka i raport postępów</h1>
+<div class="kafelki">
+    <div class="kafel"><span>Rozwiązane poprawnie</span><b>@Model.Poprawne</b></div>
+    <div class="kafel"><span>Rozwiązane błędnie</span><b>@Model.Bledne</b></div>
+    <div class="kafel"><span>Ukończenie lekcji</span><b>@Model.Ukonczenie%</b></div>
+    <div class="kafel"><span>Pytania do powtórki</span><b>@Model.DoPowtorki</b></div>
+    <div class="kafel"><span>Zaplanowane powtórki</span><b>@Model.Zaplanowane</b></div>
+</div>
+<div class="karta">
+    <h2>Ukończone lekcje</h2>
+    <div class="pasek"><div style="width:@(Model.Ukonczenie)%"></div></div>
+    <p class="meta">Ukończono @Model.UkonczoneLekcje z @Model.WszystkieLekcje lekcji. Lekcja jest ukończona, gdy zaliczysz quiz na wszystkich poziomach trudności i poprawnie rozwiążesz wszystkie zadania.</p>
+</div>
+
+<div class="karta">
+    <h2>Twoje postępy w ostatnich 14 dniach</h2>
+    <h3>Skuteczność odpowiedzi (%)</h3>
+    <div class="wykres" id="wykres-skutecznosc" data-url="@Url.Action("DaneWykresu", "Nauka")"></div>
+    <h3>Liczba rozwiązanych pytań i zadań</h3>
+    <div class="wykres" id="wykres-liczba"></div>
+    <p class="meta" id="wykres-info"></p>
+</div>
+
+<div class="karta">
+    <h2>Co warto poćwiczyć</h2>
+    <ul class="sugestie">
+        @foreach (var s in Model.Sugestie)
+        {
+            <li>
+                @s.Tekst
+                @if (s.Powtorka)
+                {
+                    <a class="przycisk maly-p" asp-action="PowtorzBledy">Powtórz błędne pytania</a>
+                }
+                else if (s.LekcjaId != null)
+                {
+
+                    <a class="przycisk maly-p" asp-action="Lekcja" asp-route-id="@s.LekcjaId">Przejdź do lekcji</a>
+                }
+            </li>
+        }
+    </ul>
+</div>
+
+<div class="karta">
+    <h2>Wyniki według działów</h2>
+    <div class="przewijana">
+        <table class="tabela">
+            <tr><th>Dział</th><th>Poprawne</th><th>Błędne</th><th>Ukończenie</th></tr>
+            @foreach (var k in Model.Kategorie)
+            {
+                <tr>
+                    <td>@k.Nazwa</td>
+                    <td>@k.Poprawne</td>
+                    <td>@k.Bledne</td>
+                    <td><div class="pasek"><div style="width:@(k.Ukonczenie)%"></div></div>@k.Ukonczenie% (@k.LekcjiZaliczonych z @k.LekcjiRazem)</td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+
+<div class="dwie">
+    <div class="karta">
+        <h2>Rozwiązane błędnie</h2>
+        @if (Model.BledneWpisy.Count == 0)
+        {
+            <p class="meta">Brak błędnych odpowiedzi.</p>
+        }
+        <ul class="wpisy">
+            @foreach (var w in Model.BledneWpisy)
+            {
+                <li class="zle"><small>@w.Zrodlo | @w.Lekcja</small><br />@w.Tresc<br /><b>Poprawna odpowiedź: @w.Odpowiedz</b></li>
+            }
+        </ul>
+    </div>
+    <div class="karta">
+        <h2>Rozwiązane poprawnie</h2>
+        @if (Model.PoprawneWpisy.Count == 0)
+        {
+            <p class="meta">Brak poprawnych odpowiedzi.</p>
+        }
+        <ul class="wpisy">
+            @foreach (var w in Model.PoprawneWpisy)
+            {
+                <li class="dobre"><small>@w.Zrodlo | @w.Lekcja</small><br />@w.Tresc<br /><b>Odpowiedź: @w.Odpowiedz</b></li>
+            }
+        </ul>
+    </div>
+</div>
+
+@if (Model.Quizy.Count > 0)
+{
+    var trudnosci = new[] { "", "Łatwy", "Średni", "Trudny" };
+    <div class="karta">
+        <h2>Ostatnie quizy</h2>
+        <div class="przewijana">
+            <table class="tabela">
+                <tr><th>Lekcja</th><th>Poziom</th><th>Wynik</th><th>Data</th></tr>
+                @foreach (var q in Model.Quizy)
+                {
+                    <tr><td>@q.Lekcja</td><td>@trudnosci[Math.Clamp(q.Trudnosc, 0, 3)]</td><td>@q.Punkty z @q.Razem</td><td>@(Liczydelko.Serwisy.Czas.Lokalny(q.Data).ToString("dd.MM.yyyy HH:mm"))</td></tr>
+                }
+            </table>
+        </div>
+    </div>
+}
